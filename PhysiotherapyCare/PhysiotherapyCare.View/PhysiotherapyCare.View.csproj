@@ -1,0 +1,1068 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52CEEA8F-B059-4612-B20B-36FF3D768795}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PhysiotherapyCare.View</RootNamespace>
+    <AssemblyName>PhysiotherapyCare.View</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Keyboard">
+      <HintPath>..\..\Output\DevComponents.DotNetBar.Keyboard.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Schedule">
+      <HintPath>..\..\Output\DevComponents.DotNetBar.Schedule.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid">
+      <HintPath>..\..\Output\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.4.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation">
+      <HintPath>..\..\Output\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.SuperGrid.Design">
+      <HintPath>..\..\Output\DevComponents.SuperGrid.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.TreeGX">
+      <HintPath>..\..\Output\DevComponents.TreeGX.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport, Version=2014.2.3.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\Janus.Data.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v4">
+      <HintPath>..\..\Output\Janus.Windows.ButtonBar.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.CalendarCombo.v4">
+      <HintPath>..\..\Output\Janus.Windows.CalendarCombo.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\Janus.Windows.Common.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ExplorerBar.v4">
+      <HintPath>..\..\Output\Janus.Windows.ExplorerBar.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\Janus.Windows.GridEX.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Ribbon.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\Janus.Windows.Ribbon.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Schedule.v4">
+      <HintPath>..\..\Output\Janus.Windows.Schedule.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.TimeLine.v4">
+      <HintPath>..\..\Output\Janus.Windows.TimeLine.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v4">
+      <HintPath>..\..\Output\Janus.Windows.UI.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="KagNetComponents2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=077033ba788eab41, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\KagNetComponents2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\Output\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MSS.Output\Common\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MSS.Output\Common\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PopupControl, Version=1.4.0.968, Culture=neutral, PublicKeyToken=04c10344d6495b18, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\PopupControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForms\DrugAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\DrugAdd_Frm.designer.cs">
+      <DependentUpon>DrugAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\Drug_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\Drug_Frm.designer.cs">
+      <DependentUpon>Drug_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\EquipmentUseAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\EquipmentUseAdd_Frm.designer.cs">
+      <DependentUpon>EquipmentUseAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\EquipmentUse_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\EquipmentUse_Frm.designer.cs">
+      <DependentUpon>EquipmentUse_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\ParaclinicAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\ParaclinicAdd_Frm.designer.cs">
+      <DependentUpon>ParaclinicAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\Paraclinic_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\Paraclinic_Frm.designer.cs">
+      <DependentUpon>Paraclinic_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\VaccinationAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\VaccinationAdd_Frm.designer.cs">
+      <DependentUpon>VaccinationAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\Vaccination_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\Vaccination_Frm.designer.cs">
+      <DependentUpon>Vaccination_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Patient\VisitPatientWithGroupAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Patient\VisitPatientWithGroupAdd_Frm.designer.cs">
+      <DependentUpon>VisitPatientWithGroupAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Status\AllStatusAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Status\AllStatusAdd_Frm.designer.cs">
+      <DependentUpon>AllStatusAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Status\AllStatusDetail_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\Status\AllStatusDetail_UC.designer.cs">
+      <DependentUpon>AllStatusDetail_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Status\StatusTypeAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Status\StatusTypeAdd_Frm.designer.cs">
+      <DependentUpon>StatusTypeAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Status\StatusTypeDetailAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Status\StatusTypeDetailAdd_Frm.designer.cs">
+      <DependentUpon>StatusTypeDetailAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\SicknessDetailAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\SicknessDetailAdd_Frm.designer.cs">
+      <DependentUpon>SicknessDetailAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\SicknessAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\SicknessAdd_Frm.designer.cs">
+      <DependentUpon>SicknessAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Status\StatusTypeDetail_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Status\StatusTypeDetail_Frm.designer.cs">
+      <DependentUpon>StatusTypeDetail_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\SicknessDetail_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\SicknessDetail_Frm.designer.cs">
+      <DependentUpon>SicknessDetail_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Status\StatusType_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Status\StatusType_Frm.designer.cs">
+      <DependentUpon>StatusType_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\Sickness_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\Sickness_Frm.designer.cs">
+      <DependentUpon>Sickness_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\KinShipAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\KinShipAdd_Frm.designer.cs">
+      <DependentUpon>KinShipAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\KinShip_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\KinShip_Frm.designer.cs">
+      <DependentUpon>KinShip_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\LocationPartAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\LocationPartAdd_Frm.designer.cs">
+      <DependentUpon>LocationPartAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\BankAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\BankAdd_Frm.designer.cs">
+      <DependentUpon>BankAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\LocationPart_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\LocationPart_Frm.designer.cs">
+      <DependentUpon>LocationPart_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\DoctorTypeAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\DoctorTypeAdd_Frm.designer.cs">
+      <DependentUpon>DoctorTypeAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\Bank_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\Bank_Frm.designer.cs">
+      <DependentUpon>Bank_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\InjuryTypeAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\InjuryTypeAdd_Frm.designer.cs">
+      <DependentUpon>InjuryTypeAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\DoctorType_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\DoctorType_Frm.designer.cs">
+      <DependentUpon>DoctorType_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\InjuryType_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\InjuryType_Frm.designer.cs">
+      <DependentUpon>InjuryType_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\PatientTypeAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\PatientTypeAdd_Frm.designer.cs">
+      <DependentUpon>PatientTypeAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\PatientType_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\PatientType_Frm.designer.cs">
+      <DependentUpon>PatientType_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Doctors\DoctorsContract_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Doctors\DoctorsContract_Frm.designer.cs">
+      <DependentUpon>DoctorsContract_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Doctors\DoctorsContractAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Doctors\DoctorsContractAdd_Frm.designer.cs">
+      <DependentUpon>DoctorsContractAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Patient\PatientDel_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\Patient\PatientDel_UC.designer.cs">
+      <DependentUpon>PatientDel_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\VisitHealthCareAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\VisitHealthCareAdd_Frm.designer.cs">
+      <DependentUpon>VisitHealthCareAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\VisitHealthCareDetail_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\VisitHealthCareDetail_UC.designer.cs">
+      <DependentUpon>VisitHealthCareDetail_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\ServiceTypeAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\ServiceTypeAdd_Frm.designer.cs">
+      <DependentUpon>ServiceTypeAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\ServiceTypeDscAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\ServiceTypeDscAdd_Frm.designer.cs">
+      <DependentUpon>ServiceTypeDscAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\ServiceTypeDsc_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\ServiceTypeDsc_Frm.designer.cs">
+      <DependentUpon>ServiceTypeDsc_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\ServiceType_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\ServiceType_Frm.designer.cs">
+      <DependentUpon>ServiceType_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\VisitHealthCarePaymentBimeh_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\VisitHealthCarePaymentBimeh_UC.designer.cs">
+      <DependentUpon>VisitHealthCarePaymentBimeh_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\VisitHealthCarePayment_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\VisitHealthCarePayment_UC.designer.cs">
+      <DependentUpon>VisitHealthCarePayment_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\ServiceHealthCare_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\ServiceHealthCare_UC.designer.cs">
+      <DependentUpon>ServiceHealthCare_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\VisitHealthCare_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\VisitHealthCare_UC.designer.cs">
+      <DependentUpon>VisitHealthCare_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\VisitHealthCarePaymentPrePaymentAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\VisitHealthCarePaymentPrePaymentAdd_Frm.designer.cs">
+      <DependentUpon>VisitHealthCarePaymentPrePaymentAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\VisitHealthCarePaymentAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\VisitHealthCarePaymentAdd_Frm.designer.cs">
+      <DependentUpon>VisitHealthCarePaymentAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\VisitHealthCarePaymentBimehAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitHealthCare\VisitHealthCarePaymentBimehAdd_Frm.designer.cs">
+      <DependentUpon>VisitHealthCarePaymentBimehAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\VisitPatientCarePaymentPrePaymentAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\VisitPatientCarePaymentPrePaymentAdd_Frm.designer.cs">
+      <DependentUpon>VisitPatientCarePaymentPrePaymentAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\SendCarePayment_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\SendCarePayment_Frm.designer.cs">
+      <DependentUpon>SendCarePayment_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\SendCarePaymentDetail_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\SendCarePaymentDetail_UC.designer.cs">
+      <DependentUpon>SendCarePaymentDetail_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\VisitPatientCarePaymentBimeh_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\VisitPatientCarePaymentBimeh_UC.designer.cs">
+      <DependentUpon>VisitPatientCarePaymentBimeh_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\VisitPatientCarePayment_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\VisitPatientCarePayment_UC.designer.cs">
+      <DependentUpon>VisitPatientCarePayment_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\VisitPatientCareAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\VisitPatientCareAdd_Frm.designer.cs">
+      <DependentUpon>VisitPatientCareAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\VisitPatientCare_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\VisitPatientCare_UC.designer.cs">
+      <DependentUpon>VisitPatientCare_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\VisitPatientCarePaymentAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\VisitPatientCarePaymentAdd_Frm.designer.cs">
+      <DependentUpon>VisitPatientCarePaymentAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\VisitPatientCarePaymentBimehAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientCare\VisitPatientCarePaymentBimehAdd_Frm.designer.cs">
+      <DependentUpon>VisitPatientCarePaymentBimehAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyPaymentBimehAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyPaymentBimehAdd_Frm.designer.cs">
+      <DependentUpon>VisitPatientPhysiotherapyPaymentBimehAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyPaymentPrePaymentAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyPaymentPrePaymentAdd_Frm.designer.cs">
+      <DependentUpon>VisitPatientPhysiotherapyPaymentPrePaymentAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyPaymentAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyPaymentAdd_Frm.designer.cs">
+      <DependentUpon>VisitPatientPhysiotherapyPaymentAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyPaymentBimeh_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyPaymentBimeh_UC.designer.cs">
+      <DependentUpon>VisitPatientPhysiotherapyPaymentBimeh_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyPayment_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyPayment_UC.designer.cs">
+      <DependentUpon>VisitPatientPhysiotherapyPayment_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyAdd_Frm.designer.cs">
+      <DependentUpon>VisitPatientPhysiotherapyAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapy_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapy_UC.designer.cs">
+      <DependentUpon>VisitPatientPhysiotherapy_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Patient\PatientAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Patient\PatientAdd_Frm.designer.cs">
+      <DependentUpon>PatientAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Patient\Patient_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\Patient\Patient_UC.designer.cs">
+      <DependentUpon>Patient_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Martyrs\MartyrsAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Martyrs\MartyrsAdd_Frm.designer.cs">
+      <DependentUpon>MartyrsAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Martyrs\Martyrs_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\Martyrs\Martyrs_UC.designer.cs">
+      <DependentUpon>Martyrs_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Doctors\DoctorsAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Doctors\DoctorsAdd_Frm.designer.cs">
+      <DependentUpon>DoctorsAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Doctors\Doctors_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\Doctors\Doctors_UC.designer.cs">
+      <DependentUpon>Doctors_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\BedsoreVisitPatientAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\BedsoreVisitPatientAdd_Frm.designer.cs">
+      <DependentUpon>BedsoreVisitPatientAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\BedsoreVisitPatient_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\BedsoreVisitPatient_UC.designer.cs">
+      <DependentUpon>BedsoreVisitPatient_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\DrugVisitPatientAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\DrugVisitPatientAdd_Frm.designer.cs">
+      <DependentUpon>DrugVisitPatientAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\DrugVisitPatient_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\DrugVisitPatient_UC.designer.cs">
+      <DependentUpon>DrugVisitPatient_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\EquipmentUseVisitPatientAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\EquipmentUseVisitPatientAdd_Frm.designer.cs">
+      <DependentUpon>EquipmentUseVisitPatientAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\EquipmentUseVisitPatient_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\EquipmentUseVisitPatient_UC.designer.cs">
+      <DependentUpon>EquipmentUseVisitPatient_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\ParaclinicVisitPatientAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\ParaclinicVisitPatientAdd_Frm.designer.cs">
+      <DependentUpon>ParaclinicVisitPatientAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\ParaclinicVisitPatient_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\ParaclinicVisitPatient_UC.designer.cs">
+      <DependentUpon>ParaclinicVisitPatient_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\SicknessVisitPatientAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\SicknessVisitPatientAdd_Frm.designer.cs">
+      <DependentUpon>SicknessVisitPatientAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\SicknessVisitPatient_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\SicknessVisitPatient_UC.designer.cs">
+      <DependentUpon>SicknessVisitPatient_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VaccinationVisitPatientAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VaccinationVisitPatientAdd_Frm.designer.cs">
+      <DependentUpon>VaccinationVisitPatientAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VaccinationVisitPatient_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VaccinationVisitPatient_UC.designer.cs">
+      <DependentUpon>VaccinationVisitPatient_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VisitPatientAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VisitPatientAdd_Frm.designer.cs">
+      <DependentUpon>VisitPatientAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VisitPatientPaymentAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VisitPatientPaymentAdd_Frm.designer.cs">
+      <DependentUpon>VisitPatientPaymentAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VisitPatientPaymentBimehAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VisitPatientPaymentBimehAdd_Frm.designer.cs">
+      <DependentUpon>VisitPatientPaymentBimehAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VisitPatientPaymentBimeh_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VisitPatientPaymentBimeh_UC.designer.cs">
+      <DependentUpon>VisitPatientPaymentBimeh_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VisitPatientPaymentPrePaymentAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VisitPatientPaymentPrePaymentAdd_Frm.designer.cs">
+      <DependentUpon>VisitPatientPaymentPrePaymentAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VisitPatientPayment_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VisitPatientPayment_UC.designer.cs">
+      <DependentUpon>VisitPatientPayment_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VisitPatient_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\VisitPatient\VisitPatient_UC.designer.cs">
+      <DependentUpon>VisitPatient_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainStart_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainStart_Frm.Designer.cs">
+      <DependentUpon>MainStart_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Class\Function_Cls.cs" />
+    <Compile Include="Other\Forms\RstPass_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\Forms\RstPass_frm.designer.cs">
+      <DependentUpon>RstPass_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Forms\SearchInternet_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\Forms\SearchInternet_frm.designer.cs">
+      <DependentUpon>SearchInternet_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Forms\Setting_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\Forms\Setting_frm.designer.cs">
+      <DependentUpon>Setting_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\VisitHealthCare\VisitHealthCareRep_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\VisitHealthCare\VisitHealthCareRep_frm.designer.cs">
+      <DependentUpon>VisitHealthCareRep_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\VisitPatientCare\VisitPatientCareRep_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\VisitPatientCare\VisitPatientCareRep_frm.designer.cs">
+      <DependentUpon>VisitPatientCareRep_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyRep_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyRep_frm.designer.cs">
+      <DependentUpon>VisitPatientPhysiotherapyRep_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\VisitPatient\VisitPatientRep_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\VisitPatient\VisitPatientRep_frm.designer.cs">
+      <DependentUpon>VisitPatientRep_frm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseForms\DrugAdd_Frm.resx">
+      <DependentUpon>DrugAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\Drug_Frm.resx">
+      <DependentUpon>Drug_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\EquipmentUseAdd_Frm.resx">
+      <DependentUpon>EquipmentUseAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\EquipmentUse_Frm.resx">
+      <DependentUpon>EquipmentUse_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\ParaclinicAdd_Frm.resx">
+      <DependentUpon>ParaclinicAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\Paraclinic_Frm.resx">
+      <DependentUpon>Paraclinic_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\VaccinationAdd_Frm.resx">
+      <DependentUpon>VaccinationAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\Vaccination_Frm.resx">
+      <DependentUpon>Vaccination_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Patient\VisitPatientWithGroupAdd_Frm.resx">
+      <DependentUpon>VisitPatientWithGroupAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Status\AllStatusAdd_Frm.resx">
+      <DependentUpon>AllStatusAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Status\AllStatusDetail_UC.resx">
+      <DependentUpon>AllStatusDetail_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Status\StatusTypeAdd_Frm.resx">
+      <DependentUpon>StatusTypeAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Status\StatusTypeDetailAdd_Frm.resx">
+      <DependentUpon>StatusTypeDetailAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\SicknessDetailAdd_Frm.resx">
+      <DependentUpon>SicknessDetailAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\SicknessAdd_Frm.resx">
+      <DependentUpon>SicknessAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Status\StatusTypeDetail_Frm.resx">
+      <DependentUpon>StatusTypeDetail_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\SicknessDetail_Frm.resx">
+      <DependentUpon>SicknessDetail_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Status\StatusType_Frm.resx">
+      <DependentUpon>StatusType_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\Sickness_Frm.resx">
+      <DependentUpon>Sickness_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\KinShipAdd_Frm.resx">
+      <DependentUpon>KinShipAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\KinShip_Frm.resx">
+      <DependentUpon>KinShip_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\LocationPartAdd_Frm.resx">
+      <DependentUpon>LocationPartAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\BankAdd_Frm.resx">
+      <DependentUpon>BankAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\LocationPart_Frm.resx">
+      <DependentUpon>LocationPart_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\DoctorTypeAdd_Frm.resx">
+      <DependentUpon>DoctorTypeAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\Bank_Frm.resx">
+      <DependentUpon>Bank_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\InjuryTypeAdd_Frm.resx">
+      <DependentUpon>InjuryTypeAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\DoctorType_Frm.resx">
+      <DependentUpon>DoctorType_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\InjuryType_Frm.resx">
+      <DependentUpon>InjuryType_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\PatientTypeAdd_Frm.resx">
+      <DependentUpon>PatientTypeAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\PatientType_Frm.resx">
+      <DependentUpon>PatientType_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Doctors\DoctorsContract_Frm.resx">
+      <DependentUpon>DoctorsContract_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Doctors\DoctorsContractAdd_Frm.resx">
+      <DependentUpon>DoctorsContractAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Patient\PatientDel_UC.resx">
+      <DependentUpon>PatientDel_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitHealthCare\VisitHealthCareAdd_Frm.resx">
+      <DependentUpon>VisitHealthCareAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitHealthCare\VisitHealthCareDetail_UC.resx">
+      <DependentUpon>VisitHealthCareDetail_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitHealthCare\ServiceTypeAdd_Frm.resx">
+      <DependentUpon>ServiceTypeAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitHealthCare\ServiceTypeDscAdd_Frm.resx">
+      <DependentUpon>ServiceTypeDscAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitHealthCare\ServiceTypeDsc_Frm.resx">
+      <DependentUpon>ServiceTypeDsc_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitHealthCare\ServiceType_Frm.resx">
+      <DependentUpon>ServiceType_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitHealthCare\VisitHealthCarePaymentBimeh_UC.resx">
+      <DependentUpon>VisitHealthCarePaymentBimeh_UC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitHealthCare\VisitHealthCarePayment_UC.resx">
+      <DependentUpon>VisitHealthCarePayment_UC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitHealthCare\ServiceHealthCare_UC.resx">
+      <DependentUpon>ServiceHealthCare_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitHealthCare\VisitHealthCare_UC.resx">
+      <DependentUpon>VisitHealthCare_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitHealthCare\VisitHealthCarePaymentPrePaymentAdd_Frm.resx">
+      <DependentUpon>VisitHealthCarePaymentPrePaymentAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitHealthCare\VisitHealthCarePaymentAdd_Frm.resx">
+      <DependentUpon>VisitHealthCarePaymentAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitHealthCare\VisitHealthCarePaymentBimehAdd_Frm.resx">
+      <DependentUpon>VisitHealthCarePaymentBimehAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatientCare\VisitPatientCarePaymentPrePaymentAdd_Frm.resx">
+      <DependentUpon>VisitPatientCarePaymentPrePaymentAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatientCare\SendCarePayment_Frm.resx">
+      <DependentUpon>SendCarePayment_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatientCare\SendCarePaymentDetail_UC.resx">
+      <DependentUpon>SendCarePaymentDetail_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatientCare\VisitPatientCarePaymentBimeh_UC.resx">
+      <DependentUpon>VisitPatientCarePaymentBimeh_UC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatientCare\VisitPatientCarePayment_UC.resx">
+      <DependentUpon>VisitPatientCarePayment_UC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatientCare\VisitPatientCareAdd_Frm.resx">
+      <DependentUpon>VisitPatientCareAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatientCare\VisitPatientCare_UC.resx">
+      <DependentUpon>VisitPatientCare_UC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatientCare\VisitPatientCarePaymentAdd_Frm.resx">
+      <DependentUpon>VisitPatientCarePaymentAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatientCare\VisitPatientCarePaymentBimehAdd_Frm.resx">
+      <DependentUpon>VisitPatientCarePaymentBimehAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyPaymentBimehAdd_Frm.resx">
+      <DependentUpon>VisitPatientPhysiotherapyPaymentBimehAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyPaymentPrePaymentAdd_Frm.resx">
+      <DependentUpon>VisitPatientPhysiotherapyPaymentPrePaymentAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyPaymentAdd_Frm.resx">
+      <DependentUpon>VisitPatientPhysiotherapyPaymentAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyPaymentBimeh_UC.resx">
+      <DependentUpon>VisitPatientPhysiotherapyPaymentBimeh_UC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyPayment_UC.resx">
+      <DependentUpon>VisitPatientPhysiotherapyPayment_UC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyAdd_Frm.resx">
+      <DependentUpon>VisitPatientPhysiotherapyAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatientPhysiotherapy\VisitPatientPhysiotherapy_UC.resx">
+      <DependentUpon>VisitPatientPhysiotherapy_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Patient\PatientAdd_Frm.resx">
+      <DependentUpon>PatientAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Patient\Patient_UC.resx">
+      <DependentUpon>Patient_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Martyrs\MartyrsAdd_Frm.resx">
+      <DependentUpon>MartyrsAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Martyrs\Martyrs_UC.resx">
+      <DependentUpon>Martyrs_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Doctors\DoctorsAdd_Frm.resx">
+      <DependentUpon>DoctorsAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Doctors\Doctors_UC.resx">
+      <DependentUpon>Doctors_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\BedsoreVisitPatientAdd_Frm.resx">
+      <DependentUpon>BedsoreVisitPatientAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\BedsoreVisitPatient_UC.resx">
+      <DependentUpon>BedsoreVisitPatient_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\DrugVisitPatientAdd_Frm.resx">
+      <DependentUpon>DrugVisitPatientAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\DrugVisitPatient_UC.resx">
+      <DependentUpon>DrugVisitPatient_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\EquipmentUseVisitPatientAdd_Frm.resx">
+      <DependentUpon>EquipmentUseVisitPatientAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\EquipmentUseVisitPatient_UC.resx">
+      <DependentUpon>EquipmentUseVisitPatient_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\ParaclinicVisitPatientAdd_Frm.resx">
+      <DependentUpon>ParaclinicVisitPatientAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\ParaclinicVisitPatient_UC.resx">
+      <DependentUpon>ParaclinicVisitPatient_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\SicknessVisitPatientAdd_Frm.resx">
+      <DependentUpon>SicknessVisitPatientAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\SicknessVisitPatient_UC.resx">
+      <DependentUpon>SicknessVisitPatient_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\VaccinationVisitPatientAdd_Frm.resx">
+      <DependentUpon>VaccinationVisitPatientAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\VaccinationVisitPatient_UC.resx">
+      <DependentUpon>VaccinationVisitPatient_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\VisitPatientAdd_Frm.resx">
+      <DependentUpon>VisitPatientAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\VisitPatientPaymentAdd_Frm.resx">
+      <DependentUpon>VisitPatientPaymentAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\VisitPatientPaymentBimehAdd_Frm.resx">
+      <DependentUpon>VisitPatientPaymentBimehAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\VisitPatientPaymentBimeh_UC.resx">
+      <DependentUpon>VisitPatientPaymentBimeh_UC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\VisitPatientPaymentPrePaymentAdd_Frm.resx">
+      <DependentUpon>VisitPatientPaymentPrePaymentAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\VisitPatientPayment_UC.resx">
+      <DependentUpon>VisitPatientPayment_UC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\VisitPatient\VisitPatient_UC.resx">
+      <DependentUpon>VisitPatient_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainStart_Frm.resx">
+      <DependentUpon>MainStart_Frm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\Forms\RstPass_frm.resx">
+      <DependentUpon>RstPass_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\Forms\SearchInternet_frm.resx">
+      <DependentUpon>SearchInternet_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\Forms\Setting_frm.resx">
+      <DependentUpon>Setting_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\VisitHealthCare\VisitHealthCareRep_frm.resx">
+      <DependentUpon>VisitHealthCareRep_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\VisitPatientCare\VisitPatientCareRep_frm.resx">
+      <DependentUpon>VisitPatientCareRep_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\VisitPatientPhysiotherapy\VisitPatientPhysiotherapyRep_frm.resx">
+      <DependentUpon>VisitPatientPhysiotherapyRep_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\VisitPatient\VisitPatientRep_frm.resx">
+      <DependentUpon>VisitPatientRep_frm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MKH.Contacts\MKH.Contacts.View\MKH.Contacts.View.csproj">
+      <Project>{dc28af5f-bc96-497e-99d9-153d7e7111e7}</Project>
+      <Name>MKH.Contacts.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MKH.Library\MKH.Library\MKH.Library.csproj">
+      <Project>{5b5748b5-7246-443f-b5ef-8d2a34abc134}</Project>
+      <Name>MKH.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MKH.Permission\MKH.Permission.Model\MKH.Permission.Model.csproj">
+      <Project>{e6a63853-d0dd-4557-88c5-75fb63ca9ddf}</Project>
+      <Name>MKH.Permission.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MKH.Permission\MKH.Permission.ViewModel\MKH.Permission.ViewModel.csproj">
+      <Project>{8998106e-2678-40c6-9bfd-a9c6638d7223}</Project>
+      <Name>MKH.Permission.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MKH.Permission\MKH.Permission.View\MKH.Permission.View.csproj">
+      <Project>{b359baf8-7e36-4664-9db7-73c8d42527c5}</Project>
+      <Name>MKH.Permission.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MKH.SMS\MKH.SMS.View\MKH.SMS.View.csproj">
+      <Project>{a86fdf38-0b0b-4b44-83a9-522417b4c55f}</Project>
+      <Name>MKH.SMS.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PhysiotherapyCare.Model\PhysiotherapyCare.Model.csproj">
+      <Project>{6f89cfd7-8d34-497a-a5cc-e7a1b7f62e7c}</Project>
+      <Name>PhysiotherapyCare.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PhysiotherapyCare.ViewModel\PhysiotherapyCare.ViewModel.csproj">
+      <Project>{46b2fa4a-0f9f-4532-af2d-70960d6d1631}</Project>
+      <Name>PhysiotherapyCare.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

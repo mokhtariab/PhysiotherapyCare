@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesStatusTypeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;Integrated Security=True" SettingsObjectName="PhysiotherapyCare.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="STA.VW_StatusType" Member="VW_StatusTypes">
+    <Type Name="VW_StatusType">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="STA.TBL_StatusType" Member="TBL_StatusTypes">
+    <Type Name="TBL_StatusType">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="STA.TBL_StatusTypeDetail" Member="TBL_StatusTypeDetails">
+    <Type Name="TBL_StatusTypeDetail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StatusType_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="STA.VW_StatusTypeDetail" Member="VW_StatusTypeDetails">
+    <Type Name="VW_StatusTypeDetail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StatusType_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="StatusTypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="STA.SP_StatusTypeDelete" Method="SP_StatusTypeDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="STA.SP_StatusTypeDetailDelete" Method="SP_StatusTypeDetailDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="STA.SP_StatusTypeDetailInsert" Method="SP_StatusTypeDetailInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="StatusType_Id" Parameter="statusType_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="STA.SP_StatusTypeDetailUpdate" Method="SP_StatusTypeDetailUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StatusType_Id" Parameter="statusType_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="STA.SP_StatusTypeInsert" Method="SP_StatusTypeInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" Direction="InOut" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="STA.SP_StatusTypeUpdate" Method="SP_StatusTypeUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

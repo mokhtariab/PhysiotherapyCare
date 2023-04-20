@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesSoftwareAccessUserDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;Integrated Security=True" SettingsObjectName="MKH.Permission.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="SEC.VW_SoftwareAccessUser" Member="VW_SoftwareAccessUsers">
+    <Type Name="VW_SoftwareAccessUser">
+      <Column Name="SoftwareAccess_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="SEC.TBL_SoftwareAccessUser" Member="TBL_SoftwareAccessUsers">
+    <Type Name="TBL_SoftwareAccessUser">
+      <Column Name="SoftwareAccess_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="SEC.SP_SoftwareAccessUserDelete" Method="SP_SoftwareAccessUserDelete">
+    <Parameter Name="SoftwareAccess_Id" Parameter="softwareAccess_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="SEC.SP_SoftwareAccessUserInsert" Method="SP_SoftwareAccessUserInsert">
+    <Parameter Name="SoftwareAccess_Id" Parameter="softwareAccess_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

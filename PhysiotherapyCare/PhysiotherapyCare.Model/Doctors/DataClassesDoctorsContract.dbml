@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesDoctorsContractDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;Integrated Security=True" SettingsObjectName="PhysiotherapyCare.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.VW_DoctorsContract" Member="VW_DoctorsContracts">
+    <Type Name="VW_DoctorsContract">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Doctor_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContractNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ContractDate" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ContractEndDate" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ContractPercent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChangeDateTime" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="UsersNameFamily" Type="System.String" DbType="VarChar(201)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_DoctorsContract" Member="TBL_DoctorsContracts">
+    <Type Name="TBL_DoctorsContract">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Doctor_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContractNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ContractDate" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ContractEndDate" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ContractPercent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChangeDateTime" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_DoctorsContractOnLineUpdate" Method="SP_DoctorsContractOnLineUpdate">
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_DoctorsContractDelete" Method="SP_DoctorsContractDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_DoctorsContractUpdate" Method="SP_DoctorsContractUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Doctor_Id" Parameter="doctor_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ContractNo" Parameter="contractNo" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ContractDate" Parameter="contractDate" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ContractEndDate" Parameter="contractEndDate" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ContractPercent" Parameter="contractPercent" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Active" Parameter="active" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_DoctorsContractInsert" Method="SP_DoctorsContractInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="Doctor_Id" Parameter="doctor_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ContractNo" Parameter="contractNo" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ContractDate" Parameter="contractDate" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ContractEndDate" Parameter="contractEndDate" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ContractPercent" Parameter="contractPercent" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Active" Parameter="active" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

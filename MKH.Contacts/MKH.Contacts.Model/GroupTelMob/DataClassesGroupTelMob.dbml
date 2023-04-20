@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesGroupTelMobDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;Integrated Security=True" SettingsObjectName="MKH.Contacts.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="TEL.TBL_GroupTelMob" Member="TBL_GroupTelMobs">
+    <Type Name="TBL_GroupTelMob">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="TEL.VW_GroupTelMob" Member="VW_GroupTelMobs">
+    <Type Name="VW_GroupTelMob">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="TEL.SP_GroupTelMobDelete" Method="SP_GroupTelMobDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="TEL.SP_GroupTelMobInsert" Method="SP_GroupTelMobInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="GroupName" Parameter="groupName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Active" Parameter="active" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="TEL.SP_GroupTelMobUpdate" Method="SP_GroupTelMobUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GroupName" Parameter="groupName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Active" Parameter="active" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

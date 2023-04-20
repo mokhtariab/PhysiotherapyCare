@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15, 14.25" name="DataClassesBase">
+  <DataContextMoniker Name="/DataClassesBaseDataContext" />
+  <nestedChildShapes>
+    <classShape Id="74e337c8-9db0-42b4-85a8-e842ea9ec6f1" absoluteBounds="6.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/TBL_Bank" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a6f7e74a-bf7a-4994-bd06-3fcf46d839ec" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4faf0241-0851-4b5c-92df-a9222c4aae2c" absoluteBounds="0.75, 6.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/TBL_DoctorType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="18310e33-c5c6-46ed-b913-8df680a35f89" absoluteBounds="0.765, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c0ee219-0b6d-45eb-b6b1-ff9fadb0beff" absoluteBounds="0.75, 3.875, 2, 1.193992513020834">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/TBL_InjuryType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3f64d535-6305-4408-ab65-732efd325f42" absoluteBounds="0.765, 4.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dcdc7ad2-64ca-41c8-80b7-4cfe203f9877" absoluteBounds="6.75, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/TBL_KinShip" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8e05fa02-2581-4288-ae95-8e1b5e4bf851" absoluteBounds="6.765, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="441b0138-307b-418b-aef3-4cf68e94f94e" absoluteBounds="3.75, 6.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/TBL_LocationPart" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81b21b53-e8b6-4d46-8e1d-3132d3b43298" absoluteBounds="3.765, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a6742ee-c0dc-4547-8b4d-bd4e294bfe1a" absoluteBounds="0.75, 0.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/TBL_PatientType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ce2db91-009b-4300-a266-1a3787df006a" absoluteBounds="0.765, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="055fa761-da2c-40ad-81b3-0d72c3257f4c" absoluteBounds="6.75, 4.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/TBL_PaymentStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7477b878-fc6f-4631-961a-1e0b7efad516" absoluteBounds="6.765, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9a928dca-e05a-4c85-a068-0b3170b891bc" absoluteBounds="6.75, 6.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/TBL_PaymentType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2a5f61ee-cc8d-4fc1-b01a-148085aca76c" absoluteBounds="6.765, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e943d345-8a37-4821-a4f1-b9b98a82b6ab" absoluteBounds="0.75, 8.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/TBL_VisitStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0cd179c8-80e7-468f-937c-c3b5c468b088" absoluteBounds="0.765, 9.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="286878a3-a9aa-4d3c-bb05-5cb7955e12e1" absoluteBounds="3.5, 3.875, 2, 1.193992513020834">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/TBL_InjuryTypePatient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bcddb9d6-5f6d-4a03-890e-20786eff4998" absoluteBounds="3.515, 4.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="39f24eb5-2d54-4393-ad89-dde6a6b200ec" absoluteBounds="3.75, 8.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/TBL_LocationPartDoctor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b6e4d4cd-bdaf-4637-bbaf-a9266376e325" absoluteBounds="3.765, 9.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9fd482f-8c27-44e7-94a2-ffbc931058fa" absoluteBounds="3.5, 0.875, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/TBL_PatientTypeGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d75af16a-6b98-44df-96e3-c721e0cbfde7" absoluteBounds="3.515, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 4.72524251302083); (3.5 : 4.72524251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesBaseDataContext/TBL_InjuryType/TBL_InjuryType_TBL_InjuryTypePatient" />
+      <nodes>
+        <classShapeMoniker Id="3c0ee219-0b6d-45eb-b6b1-ff9fadb0beff" />
+        <classShapeMoniker Id="286878a3-a9aa-4d3c-bb05-5cb7955e12e1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.47199625651042); (3.5 : 1.47199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesBaseDataContext/TBL_PatientType/TBL_PatientType_TBL_PatientTypeGroup" />
+      <nodes>
+        <classShapeMoniker Id="8a6742ee-c0dc-4547-8b4d-bd4e294bfe1a" />
+        <classShapeMoniker Id="d9fd482f-8c27-44e7-94a2-ffbc931058fa" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="92e6d0df-bc08-4291-95fe-a45eb7133e80" absoluteBounds="9.75, 5.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/VW_Bank" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2bf3425-f245-4543-8e17-bf0d0195b8dc" absoluteBounds="9.765, 6.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cd7e1090-fb1d-4af6-856f-034fbcc02932" absoluteBounds="9.75, 7.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/VW_DoctorType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="248a5dda-e671-4ae1-99de-fdaa9e49529b" absoluteBounds="9.765, 8.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="983541d0-6858-4526-9c01-21d7c13415c4" absoluteBounds="9.75, 9.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/VW_InjuryType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c57723d9-c866-42a0-8840-9fc54cf94f04" absoluteBounds="9.765, 10.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="70449b09-6927-4cf6-a52d-8ef870eb7fcc" absoluteBounds="0.75, 10.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/VW_KinShip" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1fa5e893-7506-426f-ad66-e93d74086de0" absoluteBounds="0.765, 11.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c06a265e-7a64-44d1-a39b-8d290e0e1ab5" absoluteBounds="3.75, 10.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/VW_LocationPart" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b920ff04-78bc-4bbb-bb41-0c57d7fb9a61" absoluteBounds="3.765, 11.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7ee0a3b5-12bd-44f5-afd8-fb36f35a151b" absoluteBounds="6.75, 11.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/VW_PatientType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d2f19bee-a1b8-4764-bd4a-c739a96c6913" absoluteBounds="6.765, 12.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="090a62ea-fad3-4940-b239-a3ba97e0e877" absoluteBounds="9.75, 11.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/VW_PaymentStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="68daf1eb-e0e6-4aaf-9610-8dd932a45daf" absoluteBounds="9.765, 12.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e2d6b069-c976-4e2d-af1a-624e8187b1bc" absoluteBounds="12.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/VW_PaymentType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d11ffe7-5f78-44df-80fd-7238aee3a3dd" absoluteBounds="12.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0aaa5a2d-b434-4983-a921-6038c3677c08" absoluteBounds="0.75, 12.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/VW_VisitStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ebaea150-d060-4839-ab06-83714357420a" absoluteBounds="0.765, 13.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0ca8cd46-63e7-4868-b999-4191160487e5" absoluteBounds="12.75, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/VW_InjuryTypePatient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0cfd4128-3e3b-4fff-a45f-485d61119954" absoluteBounds="12.765, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="19a360ee-a3b4-4241-80db-12cf3adf518f" absoluteBounds="12.75, 4.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/VW_LocationPartDoctor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d9f4c973-fa37-4669-87c1-35c896424e6b" absoluteBounds="12.765, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b3ece4ad-d274-4a37-bf7c-9d4f181e9b65" absoluteBounds="12.75, 9.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/VW_PatientTypeGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a013535-a08f-4205-99c3-fc88395186c8" absoluteBounds="12.765, 10.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c325ef82-5db7-402a-ad8c-ec30e825ddd0" absoluteBounds="12.75, 11.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/VW_StateSickness" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29406bb0-af9e-4c8e-9c27-63fdd69b58e2" absoluteBounds="12.765, 12.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e51e7df7-06e2-4849-9cf7-9d0a8d666272" absoluteBounds="0.5, 2.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataClassesBaseDataContext/TBL_NODuplicateForm" />
+      <nestedChildShapes>
+        <elementListCompartment Id="69097d3e-e91d-43a2-a9cf-165e4f97482d" absoluteBounds="0.51500000000000012, 2.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesSystemLogDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;Integrated Security=True" SettingsObjectName="PhysiotherapyCare.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_SystemLog" Member="TBL_SystemLogs">
+    <Type Name="TBL_SystemLog">
+      <Column Name="Id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ChangeDateTime" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ActionType" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FormChangeName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_SystemLog" Member="VW_SystemLogs">
+    <Type Name="VW_SystemLog">
+      <Column Name="Id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ChangeDateTime" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ActionType" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FormChangeName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsersNameFamily" Type="System.String" DbType="VarChar(201)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_SystemLogDelete" Method="SP_SystemLogDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_SystemLogInsert" Method="SP_SystemLogInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Decimal" DbType="Decimal(18,0)" Direction="InOut" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ActionType" Parameter="actionType" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="FormChangeName" Parameter="formChangeName" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_SystemLogUpdate" Method="SP_SystemLogUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ActionType" Parameter="actionType" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="FormChangeName" Parameter="formChangeName" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

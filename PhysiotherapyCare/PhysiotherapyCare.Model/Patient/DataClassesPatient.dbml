@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesPatientDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;Integrated Security=True" SettingsObjectName="PhysiotherapyCare.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_PatientStateSickness" Member="TBL_PatientStateSicknesses">
+    <Type Name="TBL_PatientStateSickness">
+      <Column Name="Patient_Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StateSicknessDetail_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_PatientStateSickness" Member="VW_PatientStateSicknesses">
+    <Type Name="VW_PatientStateSickness">
+      <Column Name="Patient_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StateSicknessDetail_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_Patient" Member="VW_Patients">
+    <Type Name="VW_Patient">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DosiersNo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PatientName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PatientFamily" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SexStr" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="Sex" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NationalCode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Martyr_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PatientTypeStr" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="InjuryTypeStr" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="BrithDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BrithCityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PercentState" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CityPart" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InstitutePart" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="AddressPart" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelHome" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelBusiness" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BasicInsurance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CompletionInsurance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AccountNo1" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="AccountNo2" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="AccountNo3" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="DeActiveDsc" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MartyrNameFamily" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Bank_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="BankName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NationalCode1" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MartyrName1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MartyrDate1" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MartyrFew" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SingleOrNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BonyadAddEven" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="BonyadAddEvenStr" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="LastDoctorPhysiotherapy_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastPhysiotherapyDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastDoctorHealthCare_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastCareDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastHealthCareDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastVisitDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastDoctorVisit_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastDoctorVisitNameF" Type="System.String" DbType="VarChar(101)" CanBeNull="true" />
+      <Column Name="LastDoctorPhysiotherapyNameF" Type="System.String" DbType="VarChar(101)" CanBeNull="true" />
+      <Column Name="LastDoctorHealthCareNameF" Type="System.String" DbType="VarChar(101)" CanBeNull="true" />
+      <Column Name="LastVisitPatientCareNameF" Type="System.String" DbType="VarChar(101)" CanBeNull="true" />
+      <Column Name="LastVisitPatientCare_Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChangeDateTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UsersNameFamily" Type="System.String" DbType="VarChar(201)" CanBeNull="true" />
+      <Column Name="BonyadDosier" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StatePart" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CityState" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_Patient" Member="TBL_Patients">
+    <Type Name="TBL_Patient">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DosiersNo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PatientName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PatientFamily" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NationalCode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Martyr_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PatientTypeStr" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="InjuryTypeStr" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="BrithDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BrithCityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PercentState" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SingleOrNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BonyadAddEven" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="BonyadDosier" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StatePart" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CityState" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CityPart" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InstitutePart" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="AddressPart" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelHome" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelBusiness" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BasicInsurance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CompletionInsurance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastDoctorVisit_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastVisitDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastDoctorPhysiotherapy_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastPhysiotherapyDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastDoctorHealthCare_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastHealthCareDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastVisitPatientCare_Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="LastCareDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Bank_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="AccountNo1" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="AccountNo2" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="AccountNo3" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="DeActiveDsc" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChangeDateTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_PatientInjuryStrUpdate" Method="SP_PatientInjuryStrUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PatientStateSicknessDelete" Method="SP_PatientStateSicknessDelete">
+    <Parameter Name="Patient_Id" Parameter="patient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="StateSicknessDetail_Id" Parameter="stateSicknessDetail_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PatientStateSicknessInsert" Method="SP_PatientStateSicknessInsert">
+    <Parameter Name="Patient_Id" Parameter="patient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="StateSicknessDetail_Id" Parameter="stateSicknessDetail_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PatientStateSicknessUpdate" Method="SP_PatientStateSicknessUpdate">
+    <Parameter Name="Patient_Id" Parameter="patient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="StateSicknessDetail_Id" Parameter="stateSicknessDetail_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PatientDelete" Method="SP_PatientDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PatientReIndexForAllAction" Method="SP_PatientReIndexForAllAction">
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PatientInsert" Method="SP_PatientInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="CreateDate" Parameter="createDate" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="DosiersNo" Parameter="dosiersNo" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="PatientName" Parameter="patientName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PatientFamily" Parameter="patientFamily" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ParentName" Parameter="parentName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Sex" Parameter="sex" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="IDNO" Parameter="iDNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="NationalCode" Parameter="nationalCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Martyr_Id" Parameter="martyr_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PatientTypeStr" Parameter="patientTypeStr" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="InjuryTypeStr" Parameter="injuryTypeStr" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="BrithDate" Parameter="brithDate" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="BrithCityName" Parameter="brithCityName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PercentState" Parameter="percentState" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SingleOrNo" Parameter="singleOrNo" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="BonyadAddEven" Parameter="bonyadAddEven" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="BonyadDosier" Parameter="bonyadDosier" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="StatePart" Parameter="statePart" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CityState" Parameter="cityState" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CityPart" Parameter="cityPart" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="InstitutePart" Parameter="institutePart" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="AddressPart" Parameter="addressPart" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Address" Parameter="address" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="PostalCode" Parameter="postalCode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TelHome" Parameter="telHome" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TelBusiness" Parameter="telBusiness" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Mobile" Parameter="mobile" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Mobile2" Parameter="mobile2" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="BasicInsurance" Parameter="basicInsurance" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CompletionInsurance" Parameter="completionInsurance" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastDoctorVisit_Id" Parameter="lastDoctorVisit_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LastVisitDate" Parameter="lastVisitDate" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="LastDoctorPhysiotherapy_Id" Parameter="lastDoctorPhysiotherapy_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LastPhysiotherapyDate" Parameter="lastPhysiotherapyDate" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="LastDoctorHealthCare_Id" Parameter="lastDoctorHealthCare_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LastHealthCareDate" Parameter="lastHealthCareDate" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="LastVisitPatientCare_Id" Parameter="lastVisitPatientCare_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LastCareDate" Parameter="lastCareDate" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="Bank_Id" Parameter="bank_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="AccountNo1" Parameter="accountNo1" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="AccountNo2" Parameter="accountNo2" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="AccountNo3" Parameter="accountNo3" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="DeActiveDsc" Parameter="deActiveDsc" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="Active" Parameter="active" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="NVarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PatientDelUpdate" Method="SP_PatientDelUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ActiveOrNo" Parameter="activeOrNo" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="DeActiveDsc" Parameter="deActiveDsc" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="NVarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PatientUpdate" Method="SP_PatientUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreateDate" Parameter="createDate" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="DosiersNo" Parameter="dosiersNo" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="PatientName" Parameter="patientName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PatientFamily" Parameter="patientFamily" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ParentName" Parameter="parentName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Sex" Parameter="sex" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="IDNO" Parameter="iDNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="NationalCode" Parameter="nationalCode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Martyr_Id" Parameter="martyr_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PatientTypeStr" Parameter="patientTypeStr" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="InjuryTypeStr" Parameter="injuryTypeStr" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="BrithDate" Parameter="brithDate" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="BrithCityName" Parameter="brithCityName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PercentState" Parameter="percentState" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SingleOrNo" Parameter="singleOrNo" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="BonyadAddEven" Parameter="bonyadAddEven" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="BonyadDosier" Parameter="bonyadDosier" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="StatePart" Parameter="statePart" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CityState" Parameter="cityState" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CityPart" Parameter="cityPart" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="InstitutePart" Parameter="institutePart" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="AddressPart" Parameter="addressPart" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Address" Parameter="address" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="PostalCode" Parameter="postalCode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TelHome" Parameter="telHome" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TelBusiness" Parameter="telBusiness" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Mobile" Parameter="mobile" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Mobile2" Parameter="mobile2" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="BasicInsurance" Parameter="basicInsurance" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CompletionInsurance" Parameter="completionInsurance" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastDoctorVisit_Id" Parameter="lastDoctorVisit_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LastVisitDate" Parameter="lastVisitDate" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="LastDoctorPhysiotherapy_Id" Parameter="lastDoctorPhysiotherapy_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LastPhysiotherapyDate" Parameter="lastPhysiotherapyDate" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="LastDoctorHealthCare_Id" Parameter="lastDoctorHealthCare_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LastHealthCareDate" Parameter="lastHealthCareDate" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="LastVisitPatientCare_Id" Parameter="lastVisitPatientCare_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LastCareDate" Parameter="lastCareDate" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="Bank_Id" Parameter="bank_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="AccountNo1" Parameter="accountNo1" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="AccountNo2" Parameter="accountNo2" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="AccountNo3" Parameter="accountNo3" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="DeActiveDsc" Parameter="deActiveDsc" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="Active" Parameter="active" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="NVarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PatientUpdateWithFieldValue" Method="SP_PatientUpdateWithFieldValue">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FieldName" Parameter="fieldName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FieldValue" Parameter="fieldValue" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="NVarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_TableNameUpdateWithNullValue" Method="SP_TableNameUpdateWithNullValue">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TableName" Parameter="tableName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="FieldName" Parameter="fieldName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="NVarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

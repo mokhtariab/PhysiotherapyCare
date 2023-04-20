@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesGroupPersonDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;User ID=sa" SettingsObjectName="MKH.Contacts.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="TEL.TBL_GroupPerson" Member="TBL_GroupPersons">
+    <Type Name="TBL_GroupPerson">
+      <Column Name="Group_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Person_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="TEL.VW_GroupPerson" Member="VW_GroupPersons">
+    <Type Name="VW_GroupPerson">
+      <Column Name="Group_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Person_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="TEL.SP_GroupPersonDelete" Method="SP_GroupPersonDelete">
+    <Parameter Name="Group_ID" Parameter="group_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Person_ID" Parameter="person_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="TEL.SP_GroupPersonInsert" Method="SP_GroupPersonInsert">
+    <Parameter Name="Group_ID" Parameter="group_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Person_ID" Parameter="person_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

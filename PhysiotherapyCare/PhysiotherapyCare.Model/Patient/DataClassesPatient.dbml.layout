@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 16.375" name="DataClassesPatient">
+  <DataContextMoniker Name="/DataClassesPatientDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4007f15a-c5fa-4980-ba20-381147d75a98" absoluteBounds="0.875, 14.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClassesPatientDataContext/TBL_PatientStateSickness" />
+      <nestedChildShapes>
+        <elementListCompartment Id="824ec04e-4e8d-4bd7-9b64-90cbd03ac462" absoluteBounds="0.89000000000000012, 14.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="433f512f-fa5f-4493-945f-f8a2d86c2202" absoluteBounds="3.375, 14.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClassesPatientDataContext/VW_PatientStateSickness" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb7a9c8f-836a-48eb-b52a-37596bb244f3" absoluteBounds="3.39, 15.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9fd8bc24-1a3a-4752-81ab-f1ce0a51cfd0" absoluteBounds="3, 1.875, 2, 12.732078450520833">
+      <DataClassMoniker Name="/DataClassesPatientDataContext/VW_Patient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="64149362-5ce1-418a-b911-5348068973f9" absoluteBounds="3.015, 2.335, 1.9700000000000002, 12.172078450520832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c9d2397-af6b-4ae8-8fe9-e21c002e49ab" absoluteBounds="0.5, 0.875, 2, 10.424461263020833">
+      <DataClassMoniker Name="/DataClassesPatientDataContext/TBL_Patient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f813bdd2-2295-4ccd-9071-57d58bd47de0" absoluteBounds="0.51500000000000012, 1.335, 1.9700000000000002, 9.8644612630208321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

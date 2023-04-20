@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46B2FA4A-0F9F-4532-AF2D-70960D6D1631}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PhysiotherapyCare.ViewModel</RootNamespace>
+    <AssemblyName>PhysiotherapyCare.ViewModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Basic\NODuplicateForm.cs" />
+    <Compile Include="PublicClass.cs" />
+    <Compile Include="Basic\PaymentStatus.cs" />
+    <Compile Include="Basic\PaymentType.cs" />
+    <Compile Include="Basic\VisitStatus.cs" />
+    <Compile Include="Basic\LocationPartDoctors.cs" />
+    <Compile Include="Basic\KinShip.cs" />
+    <Compile Include="Basic\LocationPart.cs" />
+    <Compile Include="Basic\Bank.cs" />
+    <Compile Include="Basic\PatientTypeGroup.cs" />
+    <Compile Include="Basic\InjuryTypePatient.cs" />
+    <Compile Include="Basic\PatientType.cs" />
+    <Compile Include="Basic\InjuryType.cs" />
+    <Compile Include="Basic\DoctorType.cs" />
+    <Compile Include="Doctors\DoctorsContract.cs" />
+    <Compile Include="Doctors\Doctors.cs" />
+    <Compile Include="Martyrs\Martyrs.cs" />
+    <Compile Include="Patient\PatientStateSickness.cs" />
+    <Compile Include="Report\ReportDesignList.cs" />
+    <Compile Include="Setting\BackupRestore.cs" />
+    <Compile Include="Setting\Setting.cs" />
+    <Compile Include="Status\StatusTypeDetailPatient.cs" />
+    <Compile Include="Status\StatusTypeDetailVisitPatient.cs" />
+    <Compile Include="Status\StatusTypeDetailVisitHealthCare.cs" />
+    <Compile Include="Status\StatusTypeDetailPhysiotherapy.cs" />
+    <Compile Include="Status\StatusTypeDetailCare.cs" />
+    <Compile Include="Status\StatusType.cs" />
+    <Compile Include="Status\StatusTypeDetail.cs" />
+    <Compile Include="VisitHealthCare\ServiceHealthCare.cs" />
+    <Compile Include="VisitHealthCare\ServiceTypeDsc.cs" />
+    <Compile Include="VisitHealthCare\ServiceType.cs" />
+    <Compile Include="VisitHealthCare\VisitHealthCare.cs" />
+    <Compile Include="VisitHealthCare\VisitHealthCarePayment.cs" />
+    <Compile Include="VisitPatientCare\VisitPatientCarePayment.cs" />
+    <Compile Include="VisitPatientCare\VisitPatientCare.cs" />
+    <Compile Include="Patient\Patient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VisitPatientPhysiotherapy\VisitPatientPhysiotherapyPayment.cs" />
+    <Compile Include="VisitPatientPhysiotherapy\VisitPatientPhysiotherapy.cs" />
+    <Compile Include="VisitPatient\BedsoreVisitPatient.cs" />
+    <Compile Include="VisitPatient\Drug.cs" />
+    <Compile Include="VisitPatient\DrugVisitPatient.cs" />
+    <Compile Include="VisitPatient\EquipmentUse.cs" />
+    <Compile Include="VisitPatient\EquipmentUseVisitPatient.cs" />
+    <Compile Include="VisitPatient\Paraclinic.cs" />
+    <Compile Include="VisitPatient\ParaclinicVisitPatient.cs" />
+    <Compile Include="VisitPatient\SicknessVisitPatient.cs" />
+    <Compile Include="VisitPatient\Sickness.cs" />
+    <Compile Include="VisitPatient\SicknessDetail.cs" />
+    <Compile Include="VisitPatient\Vaccination.cs" />
+    <Compile Include="VisitPatient\VaccinationVisitPatient.cs" />
+    <Compile Include="VisitPatient\VisitPatient.cs" />
+    <Compile Include="VisitPatient\VisitPatientPayment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MKH.Contacts\MKH.Contacts.Model\MKH.Contacts.Model.csproj">
+      <Project>{24e1ef74-2163-47f1-af52-ef713195aafe}</Project>
+      <Name>MKH.Contacts.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MKH.Contacts\MKH.Contacts.ViewModel\MKH.Contacts.ViewModel.csproj">
+      <Project>{377c96af-ef1b-4fa1-9a02-bf912e0c97d5}</Project>
+      <Name>MKH.Contacts.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MKH.Library\MKH.Library\MKH.Library.csproj">
+      <Project>{5b5748b5-7246-443f-b5ef-8d2a34abc134}</Project>
+      <Name>MKH.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MKH.Permission\MKH.Permission.Model\MKH.Permission.Model.csproj">
+      <Project>{e6a63853-d0dd-4557-88c5-75fb63ca9ddf}</Project>
+      <Name>MKH.Permission.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MKH.Permission\MKH.Permission.ViewModel\MKH.Permission.ViewModel.csproj">
+      <Project>{8998106e-2678-40c6-9bfd-a9c6638d7223}</Project>
+      <Name>MKH.Permission.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PhysiotherapyCare.Model\PhysiotherapyCare.Model.csproj">
+      <Project>{6f89cfd7-8d34-497a-a5cc-e7a1b7f62e7c}</Project>
+      <Name>PhysiotherapyCare.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

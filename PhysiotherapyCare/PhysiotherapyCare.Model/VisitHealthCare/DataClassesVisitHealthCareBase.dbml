@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesVisitHealthCareBaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;Integrated Security=True" SettingsObjectName="PhysiotherapyCare.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_ServiceTypeDsc" Member="TBL_ServiceTypeDscs">
+    <Type Name="TBL_ServiceTypeDsc">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceType_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PriceType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_ServiceType" Member="TBL_ServiceTypes">
+    <Type Name="TBL_ServiceType">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_ServiceHealthCare" Member="TBL_ServiceHealthCares">
+    <Type Name="TBL_ServiceHealthCare">
+      <Column Name="VisitHealthCare_Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ServiceTypeDsc_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ServiceTypeDscFew" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_ServiceHealthCare" Member="VW_ServiceHealthCares">
+    <Type Name="VW_ServiceHealthCare">
+      <Column Name="VisitHealthCare_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceTypeDsc_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceTypeDscFew" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ServiceTypeDscName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ServiceTypeDscPriceType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ServiceTypeName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_ServiceType" Member="VW_ServiceTypes">
+    <Type Name="VW_ServiceType">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_ServiceTypeDsc" Member="VW_ServiceTypeDscs">
+    <Type Name="VW_ServiceTypeDsc">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceType_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PriceType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ServiceTypeName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_ServiceHealthCareDelete" Method="SP_ServiceHealthCareDelete">
+    <Parameter Name="VisitHealthCare_Id" Parameter="visitHealthCare_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ServiceTypeDsc_Id" Parameter="serviceTypeDsc_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ServiceTypeDelete" Method="SP_ServiceTypeDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ServiceTypeDscDelete" Method="SP_ServiceTypeDscDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ServiceHealthCareWithVisitHealthCareDelete" Method="SP_ServiceHealthCareWithVisitHealthCareDelete">
+    <Parameter Name="VisitHealthCare_Id" Parameter="visitHealthCare_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SumServiceHealthCare" Method="SumServiceHealthCare" IsComposable="true">
+    <Parameter Name="VisitHealthCare_Id" Parameter="visitHealthCare_Id" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ServiceHealthCareReportForDetailSum" Method="SP_ServiceHealthCareReportForDetailSum">
+    <Parameter Name="DateStart" Parameter="dateStart" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="DateEnd" Parameter="dateEnd" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="SP_ServiceHealthCareReportForDetailSumResult">
+      <Column Name="[کد بهیاری]" Member="کد_بهیاری" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="[تعداد خدمت]" Member="تعداد_خدمت" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[مبلغ خدمت]" Member="مبلغ_خدمت" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[شرح نوع خدمت]" Member="شرح_نوع_خدمت" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="[شرح خدمت]" Member="شرح_خدمت" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ماه" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="[کد بیمار]" Member="کد_بیمار" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[کد بهیار]" Member="کد_بهیار" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_ServiceHealthCareReportForDetail" Method="SP_ServiceHealthCareReportForDetail">
+    <Parameter Name="DateStart" Parameter="dateStart" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="DateEnd" Parameter="dateEnd" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="SP_ServiceHealthCareReportForDetailResult">
+      <Column Name="[کد بهیاری]" Member="کد_بهیاری" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="[تعداد خدمت]" Member="تعداد_خدمت" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[مبلغ خدمت]" Member="مبلغ_خدمت" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[شرح نوع خدمت]" Member="شرح_نوع_خدمت" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="[شرح خدمت]" Member="شرح_خدمت" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ماه" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="[کد بیمار]" Member="کد_بیمار" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[کد بهیار]" Member="کد_بهیار" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_ServiceHealthCareReportForDetailWithGroup" Method="SP_ServiceHealthCareReportForDetailWithGroup">
+    <ElementType Name="SP_ServiceHealthCareReportForDetailWithGroupResult">
+      <Column Name="[کد بهیاری]" Member="کد_بهیاری" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="[تعداد خدمت]" Member="تعداد_خدمت" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[مبلغ خدمت]" Member="مبلغ_خدمت" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[شرح نوع خدمت]" Member="شرح_نوع_خدمت" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="[شرح خدمت]" Member="شرح_خدمت" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ماه" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="[کد بیمار]" Member="کد_بیمار" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[کد بهیار]" Member="کد_بهیار" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[تاریخ بهیاری]" Member="تاریخ_بهیاری" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_ServiceHealthCareInsert" Method="SP_ServiceHealthCareInsert">
+    <Parameter Name="VisitHealthCare_Id" Parameter="visitHealthCare_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ServiceTypeDsc_Id" Parameter="serviceTypeDsc_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ServiceTypeDscFew" Parameter="serviceTypeDscFew" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceType" Parameter="priceType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ServiceHealthCareUpdate" Method="SP_ServiceHealthCareUpdate">
+    <Parameter Name="VisitHealthCare_Id" Parameter="visitHealthCare_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ServiceTypeDsc_Id" Parameter="serviceTypeDsc_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ServiceTypeDscFew" Parameter="serviceTypeDscFew" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceType" Parameter="priceType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ServiceTypeDscInsert" Method="SP_ServiceTypeDscInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ServiceType_Id" Parameter="serviceType_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="PriceType" Parameter="priceType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ServiceTypeDscUpdate" Method="SP_ServiceTypeDscUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ServiceType_Id" Parameter="serviceType_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="PriceType" Parameter="priceType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ServiceTypeInsert" Method="SP_ServiceTypeInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" Direction="InOut" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ServiceTypeUpdate" Method="SP_ServiceTypeUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B359BAF8-7E36-4664-9DB7-73C8D42527C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MKH.Permission.View</RootNamespace>
+    <AssemblyName>MKH.Permission.View</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.4.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MSS.Output\Common\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.TreeGX, Version=10.4.0.1, Culture=neutral, PublicKeyToken=cfcbd7476b2389d1, processorArchitecture=MSIL" />
+    <Reference Include="FastReport, Version=2014.2.3.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MSS.Output\Common\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MSS.Output\Common\Janus.Data.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MSS.Output\Common\Janus.Windows.Common.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ExplorerBar.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.GridEX.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MSS.Output\Common\Janus.Windows.GridEX.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Ribbon.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MSS.Output\Common\Janus.Windows.Ribbon.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="KagNetComponents2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=077033ba788eab41, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\KagNetComponents2.dll</HintPath>
+    </Reference>
+    <Reference Include="RSaEncryptionLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\RSaEncryptionLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForms\User\SoftwareAccessUser_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\User\SoftwareAccessUser_Frm.designer.cs">
+      <DependentUpon>SoftwareAccessUser_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\Software\SoftwareAccessAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\Software\SoftwareAccessAdd_Frm.designer.cs">
+      <DependentUpon>SoftwareAccessAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\Software\SoftwareAccess_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\Software\SoftwareAccess_Frm.designer.cs">
+      <DependentUpon>SoftwareAccess_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangePass_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangePass_frm.designer.cs">
+      <DependentUpon>ChangePass_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UsersAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UsersAdd_Frm.designer.cs">
+      <DependentUpon>UsersAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainStart_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainStart_Frm.Designer.cs">
+      <DependentUpon>MainStart_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Start_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Start_frm.designer.cs">
+      <DependentUpon>Start_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportFast_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportFast_Frm.Designer.cs">
+      <DependentUpon>ReportFast_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\CheckKey_Cls.cs" />
+    <Compile Include="Security\MSSChangePassword_Cls.cs" />
+    <Compile Include="Security\MSSGetChangePass_Cls.cs" />
+    <Compile Include="Security\MSSLogin_cls.cs" />
+    <Compile Include="UserControls\Users_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Users_UC.designer.cs">
+      <DependentUpon>Users_UC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseForms\User\SoftwareAccessUser_Frm.resx">
+      <DependentUpon>SoftwareAccessUser_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\Software\SoftwareAccessAdd_Frm.resx">
+      <DependentUpon>SoftwareAccessAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\Software\SoftwareAccess_Frm.resx">
+      <DependentUpon>SoftwareAccess_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangePass_frm.resx">
+      <DependentUpon>ChangePass_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UsersAdd_Frm.resx">
+      <DependentUpon>UsersAdd_Frm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainStart_Frm.resx">
+      <DependentUpon>MainStart_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\Start_frm.resx">
+      <DependentUpon>Start_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportFast_Frm.resx">
+      <DependentUpon>ReportFast_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Users_UC.resx">
+      <DependentUpon>Users_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MKH.Library\MKH.Library\MKH.Library.csproj">
+      <Project>{5b5748b5-7246-443f-b5ef-8d2a34abc134}</Project>
+      <Name>MKH.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MKH.Permission.Model\MKH.Permission.Model.csproj">
+      <Project>{e6a63853-d0dd-4557-88c5-75fb63ca9ddf}</Project>
+      <Name>MKH.Permission.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MKH.Permission.ViewModel\MKH.Permission.ViewModel.csproj">
+      <Project>{8998106e-2678-40c6-9bfd-a9c6638d7223}</Project>
+      <Name>MKH.Permission.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

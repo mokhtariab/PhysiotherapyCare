@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesSendSMSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;Integrated Security=True" SettingsObjectName="MKH.SMS.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="SMS.TBL_SendSMS" Member="TBL_SendSMs">
+    <Type Name="TBL_SendSM">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MessageID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="MobileNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SenderName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SenderJob" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SendDateTime" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MessageText" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="SMS_Few" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Archive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChangeDateTime" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="SMS.VW_SendSMS" Member="VW_SendSMs">
+    <Type Name="VW_SendSM">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="MobileNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SenderName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SenderJob" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SendDateTime" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MessageText" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="SMS_Few" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Archive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChangeDateTime" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UsersNameFamily" Type="System.String" DbType="NVarChar(201)" CanBeNull="true" />
+      <Column Name="MessageID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="SMS.SP_SendSMSDelete" Method="SP_SendSMSDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="SMS.SP_SendSMSUpdateStatus" Method="SP_SendSMSUpdateStatus">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Status" Parameter="status" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="SMS.SP_SendSMSInsert" Method="SP_SendSMSInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="MessageID" Parameter="messageID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="MobileNo" Parameter="mobileNo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SenderName" Parameter="senderName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SenderJob" Parameter="senderJob" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SendDateTime" Parameter="sendDateTime" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="MessageText" Parameter="messageText" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Status" Parameter="status" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="SMS_Few" Parameter="sMS_Few" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Archive" Parameter="archive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="SMS.SP_SendSMSUpdate" Method="SP_SendSMSUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="MessageID" Parameter="messageID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="MobileNo" Parameter="mobileNo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SenderName" Parameter="senderName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SenderJob" Parameter="senderJob" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SendDateTime" Parameter="sendDateTime" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="MessageText" Parameter="messageText" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Status" Parameter="status" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="SMS_Few" Parameter="sMS_Few" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Archive" Parameter="archive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

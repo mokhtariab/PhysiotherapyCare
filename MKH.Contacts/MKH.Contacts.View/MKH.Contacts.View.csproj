@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC28AF5F-BC96-497E-99D9-153D7E7111E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MKH.Contacts.View</RootNamespace>
+    <AssemblyName>MKH.Contacts.View</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.4.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Data.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.ButtonBar.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.Common.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.ExplorerBar.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.GridEX.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.Ribbon.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.UI.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="KagNetComponents2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=077033ba788eab41, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\KagNetComponents2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\PersonTelMobAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonTelMobAdd_Frm.designer.cs">
+      <DependentUpon>PersonTelMobAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainStart_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainStart_Frm.Designer.cs">
+      <DependentUpon>MainStart_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PersonTelMob_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PersonTelMob_UC.designer.cs">
+      <DependentUpon>PersonTelMob_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GroupTelMobAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GroupTelMobAdd_Frm.designer.cs">
+      <DependentUpon>GroupTelMobAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\PersonGroupList_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PersonGroupList_UC.designer.cs">
+      <DependentUpon>PersonGroupList_UC.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\PersonTelMobAdd_Frm.resx">
+      <DependentUpon>PersonTelMobAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainStart_Frm.resx">
+      <DependentUpon>MainStart_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PersonTelMob_UC.resx">
+      <DependentUpon>PersonTelMob_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GroupTelMobAdd_Frm.resx">
+      <DependentUpon>GroupTelMobAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PersonGroupList_UC.resx">
+      <DependentUpon>PersonGroupList_UC.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MKH.Library\MKH.Library\MKH.Library.csproj">
+      <Project>{5b5748b5-7246-443f-b5ef-8d2a34abc134}</Project>
+      <Name>MKH.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MKH.SMS\MKH.SMS.View\MKH.SMS.View.csproj">
+      <Project>{a86fdf38-0b0b-4b44-83a9-522417b4c55f}</Project>
+      <Name>MKH.SMS.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MKH.Contacts.Model\MKH.Contacts.Model.csproj">
+      <Project>{24e1ef74-2163-47f1-af52-ef713195aafe}</Project>
+      <Name>MKH.Contacts.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MKH.Contacts.ViewModel\MKH.Contacts.ViewModel.csproj">
+      <Project>{377c96af-ef1b-4fa1-9a02-bf912e0c97d5}</Project>
+      <Name>MKH.Contacts.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Properties\DataSources\MKH.Contacts.Model.GroupTelMob.VW_GroupTelMob.datasource" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

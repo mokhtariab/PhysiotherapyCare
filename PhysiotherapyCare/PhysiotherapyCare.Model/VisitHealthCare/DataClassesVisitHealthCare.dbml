@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesVisitHealthCareDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;Integrated Security=True" SettingsObjectName="PhysiotherapyCare.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_VisitHealthCare" Member="TBL_VisitHealthCares">
+    <Type Name="TBL_VisitHealthCare">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Patient_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IssueArchive" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LetterNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LetterDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Doctor_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RequestDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PatientProblem" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="HealthCareDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VisitStatus_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReciveFileDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChangeDateTime" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_VisitHealthCare" Member="VW_VisitHealthCares">
+    <Type Name="VW_VisitHealthCare">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Patient_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IssueArchive" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LetterNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LetterDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Doctor_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RequestDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PatientProblem" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="HealthCareDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VisitStatus_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChangeDateTime" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DosiersNo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PatientName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PatientFamily" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SexStr" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="NationalCode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PatientTypeStr" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="InjuryTypeStr" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CityPart" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddressPart" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="TelHome" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelBusiness" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BonyadAddEvenStr" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="SingleOrNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DoctorName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DoctorFamily" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DoctorsNationalCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DoctorsMobile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContractNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ContractDate" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ContractEndDate" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LocationPart" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="VisitStatusName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UsersNameFamily" Type="System.String" DbType="NVarChar(201)" CanBeNull="true" />
+      <Column Name="SumServiceHealthCare" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DoctorsParentName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DoctorsTelHome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DoctorsTelBusiness" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DoctorsAddress" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="InstitutePart" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SumServiceTypeDscFewHealthCare" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReciveFileDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MedicalCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DoctorsIDNO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DoctorsBrithDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="IDNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BrithDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BrithCityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PercentState" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BasicInsurance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CompletionInsurance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DoctorsBrithCityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DoctorsAddressPart" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DoctorsEmail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CardBankNo1" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CardBankNo2" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DoctorPrice" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DoctorParentsNameFamily" Type="System.String" DbType="NVarChar(101)" CanBeNull="true" />
+      <Column Name="DoctorTaxPercent" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="BankName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BonyadDosier" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StatePart" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CityState" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_VisitHealthCareDelete" Method="SP_VisitHealthCareDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_VisitHealthCareReport" Method="SP_VisitHealthCareReport">
+    <Parameter Name="DateStart" Parameter="dateStart" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="DateEnd" Parameter="dateEnd" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="MonthSet" Parameter="monthSet" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="SP_VisitHealthCareReportResult">
+      <Column Name="[کد بهیار]" Member="کد_بهیار" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[نام بهیار]" Member="نام_بهیار" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[فامیل بهیار]" Member="فامیل_بهیار" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ماه" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="[کد ملی]" Member="کد_ملی" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="[نام پدر]" Member="نام_پدر" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[تلفن مطب]" Member="تلفن_مطب" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="موبایل" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[تلفن منزل]" Member="تلفن_منزل" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[منطقه تحت پوشش]" Member="منطقه_تحت_پوشش" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="[تعداد کل]" Member="تعداد_کل" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[تعدا فرد]" Member="تعدا_فرد" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[تعداد زوج]" Member="تعداد_زوج" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[تعداد بدون عودتی]" Member="تعداد_بدون_عودتی" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[تعداد عودتی]" Member="تعداد_عودتی" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_VisitHealthCareReportForDetail" Method="SP_VisitHealthCareReportForDetail">
+    <Parameter Name="DateStart" Parameter="dateStart" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="DateEnd" Parameter="dateEnd" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="SP_VisitHealthCareReportForDetailResult">
+      <Column Name="کد" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="[کد بیمار]" Member="کد_بیمار" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[تاریح درخواست]" Member="تاریح_درخواست" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="[مشکل بیمار]" Member="مشکل_بیمار" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="[تاریح انجام بهیاری]" Member="تاریح_انجام_بهیاری" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="[نام بیمار]" Member="نام_بیمار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[نام خانوادگی بیمار]" Member="نام_خانوادگی_بیمار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[کد ملی بیمار]" Member="کد_ملی_بیمار" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[شماره پرونده بیمار]" Member="شماره_پرونده_بیمار" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="[جنسیت بیمار]" Member="جنسیت_بیمار" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="[نسبت بیمار]" Member="نسبت_بیمار" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="[نوع بیماری بیمار]" Member="نوع_بیماری_بیمار" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="[منطقه بنیاد]" Member="منطقه_بنیاد" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[شهر/محله بیمار]" Member="شهر_محله_بیمار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[آدرس بیمار]" Member="آدرس_بیمار" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="[تلفن بیمار]" Member="تلفن_بیمار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[موبایل بیمار]" Member="موبایل_بیمار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[زوج/فرد]" Member="زوج_فرد" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="[کد بهیار]" Member="کد_بهیار" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[نام بهیار]" Member="نام_بهیار" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[فامیل بهیار]" Member="فامیل_بهیار" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[کد ملی بهیار]" Member="کد_ملی_بهیار" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="[موبایل بهیار]" Member="موبایل_بهیار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[تلفن بهیار]" Member="تلفن_بهیار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[تلفن مطب بهیار]" Member="تلفن_مطب_بهیار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[آدرس بهیار]" Member="آدرس_بهیار" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="[منطقه تحت پوشش بهیار]" Member="منطقه_تحت_پوشش_بهیار" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="[وضعیت ویزیت]" Member="وضعیت_ویزیت" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[جمع کل خدمات]" Member="جمع_کل_خدمات" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ماه" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_VisitHealthCareReportForDetailSum" Method="SP_VisitHealthCareReportForDetailSum">
+    <Parameter Name="DateStart" Parameter="dateStart" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="DateEnd" Parameter="dateEnd" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="SP_VisitHealthCareReportForDetailSumResult">
+      <Column Name="[کد بیمار]" Member="کد_بیمار" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[تاریح درخواست]" Member="تاریح_درخواست" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="[مشکل بیمار]" Member="مشکل_بیمار" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="[تاریح انجام بهیاری]" Member="تاریح_انجام_بهیاری" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="[نام بیمار]" Member="نام_بیمار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[نام خانوادگی بیمار]" Member="نام_خانوادگی_بیمار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[کد ملی بیمار]" Member="کد_ملی_بیمار" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="[شماره پرونده بیمار]" Member="شماره_پرونده_بیمار" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="[جنسیت بیمار]" Member="جنسیت_بیمار" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="[نسبت بیمار]" Member="نسبت_بیمار" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="[نوع بیماری بیمار]" Member="نوع_بیماری_بیمار" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="[منطقه بنیاد]" Member="منطقه_بنیاد" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[شهر/محله بیمار]" Member="شهر_محله_بیمار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[آدرس بیمار]" Member="آدرس_بیمار" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="[تلفن بیمار]" Member="تلفن_بیمار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[موبایل بیمار]" Member="موبایل_بیمار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[زوج/فرد]" Member="زوج_فرد" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="[کد بهیار]" Member="کد_بهیار" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[نام بهیار]" Member="نام_بهیار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[فامیل بهیار]" Member="فامیل_بهیار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[کد ملی بهیار]" Member="کد_ملی_بهیار" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="[موبایل بهیار]" Member="موبایل_بهیار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[تلفن بهیار]" Member="تلفن_بهیار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[تلفن مطب بهیار]" Member="تلفن_مطب_بهیار" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[آدرس بهیار]" Member="آدرس_بهیار" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="[منطقه تحت پوشش بهیار]" Member="منطقه_تحت_پوشش_بهیار" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="[وضعیت ویزیت]" Member="وضعیت_ویزیت" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[جمع کل خدمات]" Member="جمع_کل_خدمات" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ماه" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_VisitHealthCareInsert" Method="SP_VisitHealthCareInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="Patient_Id" Parameter="patient_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IssueArchive" Parameter="issueArchive" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="LetterNo" Parameter="letterNo" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="LetterDate" Parameter="letterDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Doctor_Id" Parameter="doctor_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RequestDate" Parameter="requestDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="PatientProblem" Parameter="patientProblem" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="HealthCareDate" Parameter="healthCareDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="VisitStatus_Id" Parameter="visitStatus_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReciveFileDate" Parameter="reciveFileDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(2000)" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_VisitHealthCareUpdate" Method="SP_VisitHealthCareUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Patient_Id" Parameter="patient_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IssueArchive" Parameter="issueArchive" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="LetterNo" Parameter="letterNo" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="LetterDate" Parameter="letterDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Doctor_Id" Parameter="doctor_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RequestDate" Parameter="requestDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="PatientProblem" Parameter="patientProblem" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="HealthCareDate" Parameter="healthCareDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="VisitStatus_Id" Parameter="visitStatus_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReciveFileDate" Parameter="reciveFileDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(2000)" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_VisitHealthCareUpdateWithFieldValue" Method="SP_VisitHealthCareUpdateWithFieldValue">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="FieldName" Parameter="fieldName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FieldValue" Parameter="fieldValue" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_VisitHealthCareVisitStatusUpdate" Method="SP_VisitHealthCareVisitStatusUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="VisitStatus_Id" Parameter="visitStatus_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_VisitHealthCareWithServiceHealthCareReport" Method="SP_VisitHealthCareWithServiceHealthCareReport">
+    <Parameter Name="WhereStr" Parameter="whereStr" Type="System.String" DbType="NVarChar(1000)" />
+    <ElementType Name="SP_VisitHealthCareWithServiceHealthCareReportResult">
+      <Column Name="[کد بهیار]" Member="کد_بهیار" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[منطقه بنیادی بیمار]" Member="منطقه_بنیادی_بیمار" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[ماه انجام بهیاری]" Member="ماه_انجام_بهیاری" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="[کد بهیاری]" Member="کد_بهیاری" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="[نام بهیار]" Member="نام_بهیار" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[فامیل بهیار]" Member="فامیل_بهیار" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[کدنظام پزشکی]" Member="کدنظام_پزشکی" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[شماره قرارداد]" Member="شماره_قرارداد" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="[تاریخ شروع قرارداد]" Member="تاریخ_شروع_قرارداد" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="[تاریخ پایان قرارداد]" Member="تاریخ_پایان_قرارداد" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="[کد ملی]" Member="کد_ملی" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="[نام پدر]" Member="نام_پدر" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[تلفن مطب]" Member="تلفن_مطب" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="موبایل" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[تلفن منزل]" Member="تلفن_منزل" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="[منطقه تحت پوشش]" Member="منطقه_تحت_پوشش" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="[شماره حساب]" Member="شماره_حساب" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="[شماره کارت]" Member="شماره_کارت" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="[نام بانک]" Member="نام_بانک" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[تاریخ انجام بهیاری]" Member="تاریخ_انجام_بهیاری" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="[کد بیمار]" Member="کد_بیمار" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[نام بیمار]" Member="نام_بیمار" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[فامیل بیمار]" Member="فامیل_بیمار" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[کد ملی بیمار]" Member="کد_ملی_بیمار" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[شماره پرونده بیمار]" Member="شماره_پرونده_بیمار" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[جنسیت بیمار]" Member="جنسیت_بیمار" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="[نسبت بیمار]" Member="نسبت_بیمار" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="[نوع مجروحیت بیمار]" Member="نوع_مجروحیت_بیمار" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="[زوج/فرد]" Member="زوج_فرد" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="[وضعیت تاهل]" Member="وضعیت_تاهل" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[پرونده بنیادی بیمار]" Member="پرونده_بنیادی_بیمار" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[بیمه پایه بیمار]" Member="بیمه_پایه_بیمار" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[بیمه تکمیلی بیمار]" Member="بیمه_تکمیلی_بیمار" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[شهر/محله بیمار]" Member="شهر_محله_بیمار" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[آدرس منزل بیمار]" Member="آدرس_منزل_بیمار" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="[موبایل بیمار]" Member="موبایل_بیمار" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[تلفن منزل بیمار]" Member="تلفن_منزل_بیمار" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="شهرستان" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="استان" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[جمع مبلغ کل خدمات]" Member="جمع_مبلغ_کل_خدمات" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[تعداد کل خدمات]" Member="تعداد_کل_خدمات" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[شماره بایگانی]" Member="شماره_بایگانی" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[شماره نامه بنیاد]" Member="شماره_نامه_بنیاد" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="[تاریخ نامه بنیاد]" Member="تاریخ_نامه_بنیاد" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="[تاریح درخواست]" Member="تاریح_درخواست" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="[مشکل بیمار]" Member="مشکل_بیمار" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="[شماره شناسنامه بیمار]" Member="شماره_شناسنامه_بیمار" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[تاریخ تولد بیمار]" Member="تاریخ_تولد_بیمار" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[محل تولد بیمار]" Member="محل_تولد_بیمار" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[موبایل 2 بیمار]" Member="موبایل_2_بیمار" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[ایمیل بیمار]" Member="ایمیل_بیمار" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[تاریخ تولد پزشک]" Member="تاریخ_تولد_پزشک" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="[تعداد خدمت]" Member="تعداد_خدمت" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[مبلغ خدمت]" Member="مبلغ_خدمت" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[شرح نوع خدمت]" Member="شرح_نوع_خدمت" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[شرح خدمت]" Member="شرح_خدمت" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[تعرفه خدمت]" Member="تعرفه_خدمت" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

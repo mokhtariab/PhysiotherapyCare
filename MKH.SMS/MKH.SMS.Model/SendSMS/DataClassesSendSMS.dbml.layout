@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClassesSendSMS">
+  <DataContextMoniker Name="/DataClassesSendSMSDataContext" />
+  <nestedChildShapes>
+    <classShape Id="088565a2-a43c-4650-abd6-0d0f8e194916" absoluteBounds="1.125, 0.875, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/DataClassesSendSMSDataContext/TBL_SendSM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f1266a0-539a-4d5a-ace0-2ca6488bdfbf" absoluteBounds="1.1400000000000001, 1.335, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17eb5b11-e7e2-4eb4-8aec-de46540b514c" absoluteBounds="3.625, 1.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/DataClassesSendSMSDataContext/VW_SendSM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73948d4b-71f3-4928-ad24-2d4ddc2f7e2c" absoluteBounds="3.64, 2.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

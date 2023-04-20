@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesDesignReportDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;Integrated Security=True" SettingsObjectName="PhysiotherapyCare.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_ReportDesignList" Member="TBL_ReportDesignLists">
+    <Type Name="TBL_ReportDesignList">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReportDesignName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ReportDesignAddress" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="DesignSetForm" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChangeDateTime" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_ReportDesignList" Member="VW_ReportDesignLists">
+    <Type Name="VW_ReportDesignList">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReportDesignName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ReportDesignAddress" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="DesignSetForm" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChangeDateTime" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_ReportDesignListDelete" Method="SP_ReportDesignListDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ReportDesignListInsert" Method="SP_ReportDesignListInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ReportDesignName" Parameter="reportDesignName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ReportDesignAddress" Parameter="reportDesignAddress" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="DesignSetForm" Parameter="designSetForm" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ReportDesignListUpdate" Method="SP_ReportDesignListUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReportDesignName" Parameter="reportDesignName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ReportDesignAddress" Parameter="reportDesignAddress" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="DesignSetForm" Parameter="designSetForm" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

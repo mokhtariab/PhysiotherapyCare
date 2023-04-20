@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesSoftwareAccessDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;Integrated Security=True" SettingsObjectName="MKH.Permission.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="SEC.VW_SoftwareAccess" Member="VW_SoftwareAccesses">
+    <Type Name="VW_SoftwareAccess">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResourceNameFarsi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ResourceName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ResourceLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="SEC.TBL_SoftwareAccess" Member="TBL_SoftwareAccesses">
+    <Type Name="TBL_SoftwareAccess">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResourceNameFarsi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ResourceName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ResourceLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="SEC.SP_SoftwareAccessDelete" Method="SP_SoftwareAccessDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="SEC.SP_SoftwareAccessInsert" Method="SP_SoftwareAccessInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ParentId" Parameter="parentId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ResourceNameFarsi" Parameter="resourceNameFarsi" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="ResourceName" Parameter="resourceName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="ResourceLevel" Parameter="resourceLevel" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="SEC.SP_SoftwareAccessUpdate" Method="SP_SoftwareAccessUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ParentId" Parameter="parentId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ResourceNameFarsi" Parameter="resourceNameFarsi" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="ResourceName" Parameter="resourceName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="ResourceLevel" Parameter="resourceLevel" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

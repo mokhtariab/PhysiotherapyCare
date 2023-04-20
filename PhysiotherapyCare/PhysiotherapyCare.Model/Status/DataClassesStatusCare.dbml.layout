@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.125" name="DataClassesStatusCare">
+  <DataContextMoniker Name="/DataClassesStatusCareDataContext" />
+  <nestedChildShapes>
+    <classShape Id="75fb09ca-9eea-4996-a2af-4765ca3ab477" absoluteBounds="0.75, 0.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/DataClassesStatusCareDataContext/TBL_StatusTypeDetailCare" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2975e7b5-c513-4297-9582-6fb5ea042655" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6e8d15cf-68ab-45c1-8f74-e7c8c82f4f27" absoluteBounds="3.75, 0.75, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/DataClassesStatusCareDataContext/VW_StatusTypeDetailCare" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2eaea410-447a-45aa-8441-d3c034905f4c" absoluteBounds="3.765, 1.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6031db31-9967-4eaa-9e54-08ea8ce69bdb" absoluteBounds="2.5, 4.625, 2, 4.2708154296875">
+      <DataClassMoniker Name="/DataClassesStatusCareDataContext/VW_StatusTypeDetailCareReport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="264e7af1-0ef4-4372-94ad-2c2c994b0a18" absoluteBounds="2.515, 5.085, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

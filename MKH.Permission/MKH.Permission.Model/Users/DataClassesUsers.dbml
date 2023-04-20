@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesUsersDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;Integrated Security=True" SettingsObjectName="MKH.Permission.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="SEC.TBL_Users" Member="TBL_Users">
+    <Type Name="TBL_User">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UserPic" Type="System.Byte[]" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NationalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TelNo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="MobileNo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UserPassword" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DateActive" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DateInActive" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsAdmin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="SEC.VW_Users" Member="VW_Users">
+    <Type Name="VW_User">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="NationalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TelNo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="MobileNo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UserPassword" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DateActive" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DateInActive" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsAdmin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="SEC.SP_UsersDelete" Method="SP_UsersDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="SEC.SP_UsersInsert" Method="SP_UsersInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Family" Parameter="family" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="UserPic" Parameter="userPic" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Parameter Name="NationalCode" Parameter="nationalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="BirthDate" Parameter="birthDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="TelNo" Parameter="telNo" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="MobileNo" Parameter="mobileNo" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="UserPassword" Parameter="userPassword" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="DateActive" Parameter="dateActive" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="DateInActive" Parameter="dateInActive" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(5000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="IsAdmin" Parameter="isAdmin" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="SEC.SP_UsersUpdate" Method="SP_UsersUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Family" Parameter="family" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="UserPic" Parameter="userPic" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Parameter Name="NationalCode" Parameter="nationalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="BirthDate" Parameter="birthDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="TelNo" Parameter="telNo" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="MobileNo" Parameter="mobileNo" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="DateActive" Parameter="dateActive" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="DateInActive" Parameter="dateInActive" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(5000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

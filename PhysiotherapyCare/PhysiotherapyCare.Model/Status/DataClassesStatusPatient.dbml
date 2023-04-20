@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesStatusPatientDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;Integrated Security=True" SettingsObjectName="PhysiotherapyCare.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="STA.TBL_StatusTypeDetailPatient" Member="TBL_StatusTypeDetailPatients">
+    <Type Name="TBL_StatusTypeDetailPatient">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Patient_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StatusTypeDetail_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ConfirmSet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="StartDateAlarm" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FReserve1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChangeDateTime" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="STA.VW_StatusTypeDetailPatient" Member="VW_StatusTypeDetailPatients">
+    <Type Name="VW_StatusTypeDetailPatient">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Patient_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StatusTypeDetail_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ConfirmSet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="StartDateAlarm" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FReserve1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChangeDateTime" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UsersNameFamily" Type="System.String" DbType="NVarChar(201)" CanBeNull="true" />
+      <Column Name="StatusTypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StatusTypeDetailName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="STA.VW_StatusTypeDetailPatientReport" Member="VW_StatusTypeDetailPatientReports">
+    <Type Name="VW_StatusTypeDetailPatientReport">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Patient_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StatusTypeDetail_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ConfirmSet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="StartDateAlarm" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FReserve1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChangeDateTime" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UsersNameFamily" Type="System.String" DbType="NVarChar(201)" CanBeNull="true" />
+      <Column Name="StatusTypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StatusTypeDetailName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PatientName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PatientFamily" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NationalCode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="STA.SP_StatusTypeDetailPatientDelete" Method="SP_StatusTypeDetailPatientDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="STA.SP_StatusTypeDetailPatientInsert" Method="SP_StatusTypeDetailPatientInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="Patient_Id" Parameter="patient_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StatusTypeDetail_Id" Parameter="statusTypeDetail_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ConfirmSet" Parameter="confirmSet" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="StartDateAlarm" Parameter="startDateAlarm" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="FReserve1" Parameter="fReserve1" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="STA.SP_StatusTypeDetailPatientDeleteWithPatientId" Method="SP_StatusTypeDetailPatientDeleteWithPatientId">
+    <Parameter Name="Patient_Id" Parameter="patient_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="STA.SP_StatusTypeDetailPatientUpdate" Method="SP_StatusTypeDetailPatientUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Patient_Id" Parameter="patient_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StatusTypeDetail_Id" Parameter="statusTypeDetail_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ConfirmSet" Parameter="confirmSet" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="StartDateAlarm" Parameter="startDateAlarm" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="FReserve1" Parameter="fReserve1" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="User_Id" Parameter="user_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeDateTime" Parameter="changeDateTime" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

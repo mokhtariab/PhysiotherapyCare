@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesMartyrsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;Integrated Security=True" SettingsObjectName="PhysiotherapyCare.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_Martyrs" Member="TBL_Martyrs">
+    <Type Name="TBL_Martyr">
+      <Column Name="MartyrId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MartyrNameFamily" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="MartyrFew" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DosiersNo1" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NationalCode1" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MartyrName1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BrithDate1" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MartyrDate1" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MartyrLocation1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DosiersNo2" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NationalCode2" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MartyrName2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BrithDate2" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MartyrDate2" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MartyrLocation2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DosiersNo3" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NationalCode3" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MartyrName3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BrithDate3" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MartyrDate3" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MartyrLocation3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_Martyrs" Member="VW_Martyrs">
+    <Type Name="VW_Martyr">
+      <Column Name="MartyrId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MartyrNameFamily" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="MartyrFew" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DosiersNo1" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NationalCode1" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MartyrName1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BrithDate1" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MartyrDate1" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MartyrLocation1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DosiersNo2" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NationalCode2" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MartyrName2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BrithDate2" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MartyrDate2" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MartyrLocation2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DosiersNo3" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NationalCode3" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MartyrName3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BrithDate3" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MartyrDate3" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MartyrLocation3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_MartyrsDelete" Method="SP_MartyrsDelete">
+    <Parameter Name="MartyrId" Parameter="martyrId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_MartyrsInsert" Method="SP_MartyrsInsert">
+    <Parameter Name="MartyrId" Parameter="martyrId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="MartyrNameFamily" Parameter="martyrNameFamily" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="MartyrFew" Parameter="martyrFew" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DosiersNo1" Parameter="dosiersNo1" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="NationalCode1" Parameter="nationalCode1" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="MartyrName1" Parameter="martyrName1" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="BrithDate1" Parameter="brithDate1" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="MartyrDate1" Parameter="martyrDate1" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="MartyrLocation1" Parameter="martyrLocation1" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DosiersNo2" Parameter="dosiersNo2" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="NationalCode2" Parameter="nationalCode2" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="MartyrName2" Parameter="martyrName2" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="BrithDate2" Parameter="brithDate2" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="MartyrDate2" Parameter="martyrDate2" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="MartyrLocation2" Parameter="martyrLocation2" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DosiersNo3" Parameter="dosiersNo3" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="NationalCode3" Parameter="nationalCode3" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="MartyrName3" Parameter="martyrName3" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="BrithDate3" Parameter="brithDate3" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="MartyrDate3" Parameter="martyrDate3" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="MartyrLocation3" Parameter="martyrLocation3" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(1000)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_MartyrsUpdate" Method="SP_MartyrsUpdate">
+    <Parameter Name="MartyrId" Parameter="martyrId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MartyrNameFamily" Parameter="martyrNameFamily" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="MartyrFew" Parameter="martyrFew" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="DosiersNo1" Parameter="dosiersNo1" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="NationalCode1" Parameter="nationalCode1" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="MartyrName1" Parameter="martyrName1" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="BrithDate1" Parameter="brithDate1" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="MartyrDate1" Parameter="martyrDate1" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="MartyrLocation1" Parameter="martyrLocation1" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DosiersNo2" Parameter="dosiersNo2" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="NationalCode2" Parameter="nationalCode2" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="MartyrName2" Parameter="martyrName2" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="BrithDate2" Parameter="brithDate2" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="MartyrDate2" Parameter="martyrDate2" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="MartyrLocation2" Parameter="martyrLocation2" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DosiersNo3" Parameter="dosiersNo3" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="NationalCode3" Parameter="nationalCode3" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="MartyrName3" Parameter="martyrName3" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="BrithDate3" Parameter="brithDate3" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="MartyrDate3" Parameter="martyrDate3" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="MartyrLocation3" Parameter="martyrLocation3" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(1000)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

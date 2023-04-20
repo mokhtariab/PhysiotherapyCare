@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClassesReciveSMS">
+  <DataContextMoniker Name="/DataClassesReciveSMSDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9483d839-b06a-48d6-98b4-b2726b1b8577" absoluteBounds="1.375, 1.5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/DataClassesReciveSMSDataContext/TBL_ReciveSM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f19bd0e-61f0-41a6-9aa5-09d09a3dfb9d" absoluteBounds="1.3900000000000001, 1.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4da15567-3c23-4901-b1d9-f5ca4c599c97" absoluteBounds="4, 1.625, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/DataClassesReciveSMSDataContext/VW_ReciveSM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1242041-7827-45c5-b66b-c6711c787242" absoluteBounds="4.015, 2.085, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

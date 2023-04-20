@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 21" name="DataClassesVisitPatientCarePayment">
+  <DataContextMoniker Name="/DataClassesVisitPatientCarePaymentDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ede89b0d-b4c3-4fd1-9ce4-b62236ce3c46" absoluteBounds="0.5, 0.625, 2, 18.308819986979167">
+      <DataClassMoniker Name="/DataClassesVisitPatientCarePaymentDataContext/TBL_VisitPatientCarePayment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1fd0ef32-dbac-47d5-b702-4bad69ec1fbc" absoluteBounds="0.515, 1.085, 1.9700000000000002, 17.748819986979164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="664e0b14-17f3-48ff-8ee4-dff999e61613" absoluteBounds="3.375, 1.625, 2, 19.078025716145834">
+      <DataClassMoniker Name="/DataClassesVisitPatientCarePaymentDataContext/VW_VisitPatientCarePayment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c2c597da-8f36-4cda-87f3-5c041b022530" absoluteBounds="3.39, 2.085, 1.9700000000000002, 18.518025716145832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

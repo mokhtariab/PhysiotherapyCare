@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesBaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;Integrated Security=True" SettingsObjectName="PhysiotherapyCare.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="Base.TBL_Bank" Member="TBL_Banks">
+    <Type Name="TBL_Bank">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Base.TBL_DoctorType" Member="TBL_DoctorTypes">
+    <Type Name="TBL_DoctorType">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Base.TBL_InjuryType" Member="TBL_InjuryTypes">
+    <Type Name="TBL_InjuryType">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="TBL_InjuryType_TBL_InjuryTypePatient" Member="TBL_InjuryTypePatients" ThisKey="Id" OtherKey="InjuryType_Id" Type="TBL_InjuryTypePatient" />
+    </Type>
+  </Table>
+  <Table Name="Base.TBL_KinShip" Member="TBL_KinShips">
+    <Type Name="TBL_KinShip">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Base.TBL_LocationPart" Member="TBL_LocationParts">
+    <Type Name="TBL_LocationPart">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Base.TBL_PatientType" Member="TBL_PatientTypes">
+    <Type Name="TBL_PatientType">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="TBL_PatientType_TBL_PatientTypeGroup" Member="TBL_PatientTypeGroups" ThisKey="Id" OtherKey="PatientType_Id" Type="TBL_PatientTypeGroup" />
+    </Type>
+  </Table>
+  <Table Name="Base.TBL_PaymentStatus" Member="TBL_PaymentStatus">
+    <Type Name="TBL_PaymentStatus">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Base.TBL_PaymentType" Member="TBL_PaymentTypes">
+    <Type Name="TBL_PaymentType">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Base.TBL_VisitStatus" Member="TBL_VisitStatus">
+    <Type Name="TBL_VisitStatus">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_InjuryTypePatient" Member="TBL_InjuryTypePatients">
+    <Type Name="TBL_InjuryTypePatient">
+      <Column Name="InjuryType_Id" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Patient_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="TBL_InjuryType_TBL_InjuryTypePatient" Member="TBL_InjuryType" ThisKey="InjuryType_Id" OtherKey="Id" Type="TBL_InjuryType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_LocationPartDoctors" Member="TBL_LocationPartDoctors">
+    <Type Name="TBL_LocationPartDoctor">
+      <Column Name="LocationPart_Id" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Doctors_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_PatientTypeGroup" Member="TBL_PatientTypeGroups">
+    <Type Name="TBL_PatientTypeGroup">
+      <Column Name="PatientType_Id" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Patient_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="TBL_PatientType_TBL_PatientTypeGroup" Member="TBL_PatientType" ThisKey="PatientType_Id" OtherKey="Id" Type="TBL_PatientType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Base.VW_Bank" Member="VW_Banks">
+    <Type Name="VW_Bank">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Base.VW_DoctorType" Member="VW_DoctorTypes">
+    <Type Name="VW_DoctorType">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Base.VW_InjuryType" Member="VW_InjuryTypes">
+    <Type Name="VW_InjuryType">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Base.VW_KinShip" Member="VW_KinShips">
+    <Type Name="VW_KinShip">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Base.VW_LocationPart" Member="VW_LocationParts">
+    <Type Name="VW_LocationPart">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Base.VW_PatientType" Member="VW_PatientTypes">
+    <Type Name="VW_PatientType">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Base.VW_PaymentStatus" Member="VW_PaymentStatus">
+    <Type Name="VW_PaymentStatus">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Base.VW_PaymentType" Member="VW_PaymentTypes">
+    <Type Name="VW_PaymentType">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Base.VW_VisitStatus" Member="VW_VisitStatus">
+    <Type Name="VW_VisitStatus">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_InjuryTypePatient" Member="VW_InjuryTypePatients">
+    <Type Name="VW_InjuryTypePatient">
+      <Column Name="InjuryType_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Patient_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_LocationPartDoctors" Member="VW_LocationPartDoctors">
+    <Type Name="VW_LocationPartDoctor">
+      <Column Name="LocationPart_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Doctors_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_PatientTypeGroup" Member="VW_PatientTypeGroups">
+    <Type Name="VW_PatientTypeGroup">
+      <Column Name="PatientType_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Patient_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_StateSickness" Member="VW_StateSicknesses">
+    <Type Name="VW_StateSickness">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Base.TBL_NODuplicateForm" Member="TBL_NODuplicateForms">
+    <Type Name="TBL_NODuplicateForm">
+      <Column Name="FormName" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="Base.SP_BankDelete" Method="SP_BankDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_BankInsert" Method="SP_BankInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" Direction="InOut" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_BankUpdate" Method="SP_BankUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_DoctorTypeDelete" Method="SP_DoctorTypeDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_DoctorTypeInsert" Method="SP_DoctorTypeInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" Direction="InOut" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_DoctorTypeUpdate" Method="SP_DoctorTypeUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_InjuryTypeDelete" Method="SP_InjuryTypeDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_InjuryTypeInsert" Method="SP_InjuryTypeInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" Direction="InOut" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_InjuryTypeUpdate" Method="SP_InjuryTypeUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_KinShipDelete" Method="SP_KinShipDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_KinShipInsert" Method="SP_KinShipInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" Direction="InOut" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_KinShipUpdate" Method="SP_KinShipUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_LocationPartDelete" Method="SP_LocationPartDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_LocationPartInsert" Method="SP_LocationPartInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" Direction="InOut" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_LocationPartUpdate" Method="SP_LocationPartUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_PatientTypeDelete" Method="SP_PatientTypeDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_PatientTypeInsert" Method="SP_PatientTypeInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" Direction="InOut" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_PatientTypeUpdate" Method="SP_PatientTypeUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_PaymentStatusDelete" Method="SP_PaymentStatusDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_PaymentStatusInsert" Method="SP_PaymentStatusInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" Direction="InOut" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_PaymentStatusUpdate" Method="SP_PaymentStatusUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_PaymentTypeDelete" Method="SP_PaymentTypeDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_PaymentTypeInsert" Method="SP_PaymentTypeInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" Direction="InOut" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_PaymentTypeUpdate" Method="SP_PaymentTypeUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_VisitStatusDelete" Method="SP_VisitStatusDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_VisitStatusInsert" Method="SP_VisitStatusInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" Direction="InOut" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_VisitStatusUpdate" Method="SP_VisitStatusUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="TitleName" Parameter="titleName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_InjuryTypePatientDelete" Method="SP_InjuryTypePatientDelete">
+    <Parameter Name="InjuryType_Id" Parameter="injuryType_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Patient_Id" Parameter="patient_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_InjuryTypePatientDeleteWithPatientId" Method="SP_InjuryTypePatientDeleteWithPatientId">
+    <Parameter Name="Patient_Id" Parameter="patient_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_InjuryTypePatientInsert" Method="SP_InjuryTypePatientInsert">
+    <Parameter Name="InjuryType_Id" Parameter="injuryType_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Patient_Id" Parameter="patient_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_InjuryTypePatientUpdate" Method="SP_InjuryTypePatientUpdate">
+    <Parameter Name="InjuryType_Id" Parameter="injuryType_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Patient_Id" Parameter="patient_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_LocationPartDoctorsDelete" Method="SP_LocationPartDoctorsDelete">
+    <Parameter Name="LocationPart_Id" Parameter="locationPart_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Doctors_Id" Parameter="doctors_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_LocationPartDoctorsDeleteWithDoctor_Id" Method="SP_LocationPartDoctorsDeleteWithDoctor_Id">
+    <Parameter Name="Doctors_Id" Parameter="doctors_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_LocationPartDoctorsInsert" Method="SP_LocationPartDoctorsInsert">
+    <Parameter Name="LocationPart_Id" Parameter="locationPart_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Doctors_Id" Parameter="doctors_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_LocationPartDoctorsUpdate" Method="SP_LocationPartDoctorsUpdate">
+    <Parameter Name="LocationPart_Id" Parameter="locationPart_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Doctors_Id" Parameter="doctors_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PatientTypeGroupDelete" Method="SP_PatientTypeGroupDelete">
+    <Parameter Name="PatientType_Id" Parameter="patientType_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Patient_Id" Parameter="patient_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PatientTypeGroupInsert" Method="SP_PatientTypeGroupInsert">
+    <Parameter Name="PatientType_Id" Parameter="patientType_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Patient_Id" Parameter="patient_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PatientTypeGroupUpdate" Method="SP_PatientTypeGroupUpdate">
+    <Parameter Name="PatientType_Id" Parameter="patientType_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Patient_Id" Parameter="patient_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PatientTypeGroupDeleteWithPatientId" Method="SP_PatientTypeGroupDeleteWithPatientId">
+    <Parameter Name="Patient_Id" Parameter="patient_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_NODuplicateFormDelete" Method="SP_NODuplicateFormDelete">
+    <Parameter Name="FormName" Parameter="formName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Id" Parameter="id" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Base.SP_NODuplicateFormInsert" Method="SP_NODuplicateFormInsert">
+    <Parameter Name="FormName" Parameter="formName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Id" Parameter="id" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CheckNODuplicateForm" Method="CheckNODuplicateForm" IsComposable="true">
+    <Parameter Name="FormName" Parameter="formName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Id" Parameter="id" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Boolean" />
+  </Function>
+</Database>

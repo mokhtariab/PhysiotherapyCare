@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.625, 12" name="DataClassesVisitPatientLink">
+  <DataContextMoniker Name="/DataClassesVisitPatientLinkDataContext" />
+  <nestedChildShapes>
+    <classShape Id="dc8b202e-99ad-4199-bd60-6f64879bd117" absoluteBounds="0.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataClassesVisitPatientLinkDataContext/TBL_VaccinationVisitPatient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="514a1db0-fdcb-4e60-a591-6c6a544248e1" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e437d268-7b96-4e49-9c26-78a2383158c3" absoluteBounds="3.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesVisitPatientLinkDataContext/TBL_SicknessVisitPatient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0214187b-2029-4fb8-91a0-ab1a915f6086" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6940d9cf-89ba-4b7f-95f4-80a06d217d50" absoluteBounds="0.75, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DataClassesVisitPatientLinkDataContext/TBL_ParaclinicVisitPatient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96004854-7c36-4d95-bf98-070701d13d7e" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="29d90f16-e4ce-495a-81cd-b5db752f1227" absoluteBounds="3.75, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DataClassesVisitPatientLinkDataContext/TBL_EquipmentUseVisitPatient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cfd4ca64-c815-468c-b98b-649fcd8eb1a5" absoluteBounds="3.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f86285db-a3c6-4607-be1b-5c6f93c92c51" absoluteBounds="6.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/DataClassesVisitPatientLinkDataContext/TBL_DrugVisitPatient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a2b4e9b-4228-47f8-888f-bbc0fcea98e3" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e1e1a951-d6bb-4058-91d5-4034feca8c67" absoluteBounds="0.75, 6.75, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/DataClassesVisitPatientLinkDataContext/TBL_BedsoreVisitPatient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="54fafa5e-e1ab-4b0d-8fa0-ee88c4c95a07" absoluteBounds="0.765, 7.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d4383cba-fbb3-44bd-ae39-4d74278d6536" absoluteBounds="6.375, 3.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataClassesVisitPatientLinkDataContext/VW_SicknessVisitPatient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f8fb9ae-9b1a-45a4-b2a2-893eba31b5fc" absoluteBounds="6.39, 4.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="109ca4ce-7a82-456f-8f70-e1854ab7c742" absoluteBounds="3.375, 6.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DataClassesVisitPatientLinkDataContext/VW_ParaclinicVisitPatient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00f9c94e-3cd9-4cce-bcd2-c9b211cfe76f" absoluteBounds="3.39, 7.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6e334b3e-945a-48cf-9529-38fd6dd88ffc" absoluteBounds="6.375, 6.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DataClassesVisitPatientLinkDataContext/VW_EquipmentUseVisitPatient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1747844-58e2-4455-b2f9-2f1936a611e7" absoluteBounds="6.39, 7.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ea3fc8c7-54c2-4307-aafc-a1d6f4e30bd2" absoluteBounds="9.375, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/DataClassesVisitPatientLinkDataContext/VW_DrugVisitPatient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e6fdb51-dab0-4c27-b0bc-37b130bb9fad" absoluteBounds="9.39, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b2c04d4b-733d-480b-94d4-cb0d52711e34" absoluteBounds="9.375, 3.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/DataClassesVisitPatientLinkDataContext/VW_BedsoreVisitPatient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c95737d-431d-490a-8dab-cd74eba5d233" absoluteBounds="9.39, 4.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2c3df7bd-5c3c-498e-9897-a2bdc56c52d5" absoluteBounds="3.375, 9.75, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/DataClassesVisitPatientLinkDataContext/VW_VaccinationVisitPatient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a7b63c52-9a71-451a-b6fb-f6f694606aa5" absoluteBounds="3.39, 10.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

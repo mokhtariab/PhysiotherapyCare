@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClassesGroupTelMob">
+  <DataContextMoniker Name="/DataClassesGroupTelMobDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1e2c530c-f3fe-404e-855c-0c3df15d632d" absoluteBounds="0.5, 1.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClassesGroupTelMobDataContext/TBL_GroupTelMob" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f8b3090-199f-4c10-b1da-6b504ff63d89" absoluteBounds="0.51500000000000012, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="13e1e771-8d85-4255-a02b-00db1fdf497d" absoluteBounds="3.375, 1.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClassesGroupTelMobDataContext/VW_GroupTelMob" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4bf2fce0-eeb1-4e2c-b2c2-60f31254d3c7" absoluteBounds="3.39, 1.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

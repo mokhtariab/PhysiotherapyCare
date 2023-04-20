@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.125" name="DataClassesStatusPhysiotherapy">
+  <DataContextMoniker Name="/DataClassesStatusPhysiotherapyDataContext" />
+  <nestedChildShapes>
+    <classShape Id="718b49bd-d622-4806-82dc-57c1d3c71e5d" absoluteBounds="0.5, 0.625, 2, 2.5401025390625">
+      <DataClassMoniker Name="/DataClassesStatusPhysiotherapyDataContext/TBL_StatusTypeDetailPhysiotherapy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7b431fb-3600-4c72-a2f7-a54bab38ada9" absoluteBounds="0.51500000000000012, 1.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ebae791-a57e-4b21-a643-bb5fa0ab06e5" absoluteBounds="3.75, 0.75, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/DataClassesStatusPhysiotherapyDataContext/VW_StatusTypeDetailPhysiotherapy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b5d4900d-c7c7-413b-9960-dc625da82ef4" absoluteBounds="3.765, 1.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c2d684fc-c544-450d-a6ed-f8e8ea716180" absoluteBounds="0.75, 4.75, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/DataClassesStatusPhysiotherapyDataContext/VW_StatusTypeDetailPhysiotherapyReport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f5b0cbf4-7928-4d58-88d6-d390c6a34623" absoluteBounds="0.765, 5.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

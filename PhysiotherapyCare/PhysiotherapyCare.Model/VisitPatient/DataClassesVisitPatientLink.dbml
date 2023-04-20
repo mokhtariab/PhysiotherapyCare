@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhysiotherapyCare" Class="DataClassesVisitPatientLinkDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=PhysiotherapyCare;Integrated Security=True" SettingsObjectName="PhysiotherapyCare.Model.Properties.Settings" SettingsPropertyName="PhysiotherapyCareConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="VST.TBL_VaccinationVisitPatient" Member="TBL_VaccinationVisitPatients">
+    <Type Name="TBL_VaccinationVisitPatient">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VisitPatient_Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Vaccination_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Few" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="VST.TBL_SicknessVisitPatient" Member="TBL_SicknessVisitPatients">
+    <Type Name="TBL_SicknessVisitPatient">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VisitPatient_Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SicknessDetail_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="VST.TBL_ParaclinicVisitPatient" Member="TBL_ParaclinicVisitPatients">
+    <Type Name="TBL_ParaclinicVisitPatient">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VisitPatient_Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Paraclinic_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParaclinicsState" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="VST.TBL_EquipmentUseVisitPatient" Member="TBL_EquipmentUseVisitPatients">
+    <Type Name="TBL_EquipmentUseVisitPatient">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VisitPatient_Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EquipmentUse_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Few" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="VST.TBL_DrugVisitPatient" Member="TBL_DrugVisitPatients">
+    <Type Name="TBL_DrugVisitPatient">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VisitPatient_Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Drug_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UseAmount" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="VST.TBL_BedsoreVisitPatient" Member="TBL_BedsoreVisitPatients">
+    <Type Name="TBL_BedsoreVisitPatient">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VisitPatient_Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="BedsorePosition" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="BedsoreMeasurement" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BedsoreDeep" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="BedsoreStartTime" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="BedsoreGrade" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="BedsoreRemain" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="VST.VW_SicknessVisitPatient" Member="VW_SicknessVisitPatients">
+    <Type Name="VW_SicknessVisitPatient">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="VisitPatient_Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SicknessDetail_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Sickness_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SicknessDetailName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SicknessName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="VST.VW_ParaclinicVisitPatient" Member="VW_ParaclinicVisitPatients">
+    <Type Name="VW_ParaclinicVisitPatient">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="VisitPatient_Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Paraclinic_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParaclinicsState" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ParaclinicName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="VST.VW_EquipmentUseVisitPatient" Member="VW_EquipmentUseVisitPatients">
+    <Type Name="VW_EquipmentUseVisitPatient">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="VisitPatient_Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EquipmentUse_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Few" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="EquipmentUseName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="VST.VW_DrugVisitPatient" Member="VW_DrugVisitPatients">
+    <Type Name="VW_DrugVisitPatient">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="VisitPatient_Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Drug_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UseAmount" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DrugName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="VST.VW_BedsoreVisitPatient" Member="VW_BedsoreVisitPatients">
+    <Type Name="VW_BedsoreVisitPatient">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VisitPatient_Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="BedsorePosition" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="BedsoreMeasurement" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BedsoreDeep" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="BedsoreStartTime" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="BedsoreGrade" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="BedsoreRemain" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="VST.VW_VaccinationVisitPatient" Member="VW_VaccinationVisitPatients">
+    <Type Name="VW_VaccinationVisitPatient">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="VisitPatient_Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Vaccination_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Few" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="VaccinationName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="VST.SP_BedsoreVisitPatientDelete" Method="SP_BedsoreVisitPatientDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_DrugVisitPatientDelete" Method="SP_DrugVisitPatientDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_EquipmentUseVisitPatientDelete" Method="SP_EquipmentUseVisitPatientDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_ParaclinicVisitPatientDelete" Method="SP_ParaclinicVisitPatientDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_SicknessVisitPatientDelete" Method="SP_SicknessVisitPatientDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_VaccinationVisitPatientDelete" Method="SP_VaccinationVisitPatientDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_VisitPatientWithDrugVisitPatientDelete" Method="SP_VisitPatientWithDrugVisitPatientDelete">
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_VisitPatientWithEquipmentUseVisitPatientDelete" Method="SP_VisitPatientWithEquipmentUseVisitPatientDelete">
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_VisitPatientWithSicknessVisitPatientDelete" Method="SP_VisitPatientWithSicknessVisitPatientDelete">
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_VisitPatientWithVaccinationVisitPatientDelete" Method="SP_VisitPatientWithVaccinationVisitPatientDelete">
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_VisitPatientWithBedsoreVisitPatientDelete" Method="SP_VisitPatientWithBedsoreVisitPatientDelete">
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_VisitPatientWithParaclinicVisitPatientDelete" Method="SP_VisitPatientWithParaclinicVisitPatientDelete">
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_VaccinationVisitPatientInsert" Method="SP_VaccinationVisitPatientInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Vaccination_Id" Parameter="vaccination_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Few" Parameter="few" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_VaccinationVisitPatientUpdate" Method="SP_VaccinationVisitPatientUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Vaccination_Id" Parameter="vaccination_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Few" Parameter="few" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_SicknessVisitPatientUpdate" Method="SP_SicknessVisitPatientUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="SicknessDetail_Id" Parameter="sicknessDetail_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_SicknessVisitPatientInsert" Method="SP_SicknessVisitPatientInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="SicknessDetail_Id" Parameter="sicknessDetail_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_ParaclinicVisitPatientUpdate" Method="SP_ParaclinicVisitPatientUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Paraclinic_Id" Parameter="paraclinic_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ParaclinicsState" Parameter="paraclinicsState" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_ParaclinicVisitPatientInsert" Method="SP_ParaclinicVisitPatientInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Paraclinic_Id" Parameter="paraclinic_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ParaclinicsState" Parameter="paraclinicsState" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_EquipmentUseVisitPatientUpdate" Method="SP_EquipmentUseVisitPatientUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EquipmentUse_Id" Parameter="equipmentUse_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Few" Parameter="few" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_EquipmentUseVisitPatientInsert" Method="SP_EquipmentUseVisitPatientInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EquipmentUse_Id" Parameter="equipmentUse_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Few" Parameter="few" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_BedsoreVisitPatientUpdate" Method="SP_BedsoreVisitPatientUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="BedsorePosition" Parameter="bedsorePosition" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="BedsoreMeasurement" Parameter="bedsoreMeasurement" Type="System.Int32" DbType="Int" />
+    <Parameter Name="BedsoreDeep" Parameter="bedsoreDeep" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="BedsoreStartTime" Parameter="bedsoreStartTime" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="BedsoreGrade" Parameter="bedsoreGrade" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="BedsoreRemain" Parameter="bedsoreRemain" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="NVarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_BedsoreVisitPatientInsert" Method="SP_BedsoreVisitPatientInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="BedsorePosition" Parameter="bedsorePosition" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="BedsoreMeasurement" Parameter="bedsoreMeasurement" Type="System.Int32" DbType="Int" />
+    <Parameter Name="BedsoreDeep" Parameter="bedsoreDeep" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="BedsoreStartTime" Parameter="bedsoreStartTime" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="BedsoreGrade" Parameter="bedsoreGrade" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="BedsoreRemain" Parameter="bedsoreRemain" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="NVarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_DrugVisitPatientUpdate" Method="SP_DrugVisitPatientUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Drug_Id" Parameter="drug_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UseAmount" Parameter="useAmount" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="VST.SP_DrugVisitPatientInsert" Method="SP_DrugVisitPatientInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="VisitPatient_Id" Parameter="visitPatient_Id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Drug_Id" Parameter="drug_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UseAmount" Parameter="useAmount" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

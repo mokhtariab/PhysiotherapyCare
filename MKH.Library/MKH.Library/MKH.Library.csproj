@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B5748B5-7246-443F-B5EF-8D2A34ABC134}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MKH.Library</RootNamespace>
+    <AssemblyName>MKH.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.4.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport, Version=2014.2.3.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\Janus.Data.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\Janus.Windows.ButtonBar.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\Janus.Windows.Common.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\Janus.Windows.GridEX.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Ribbon.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\Janus.Windows.Ribbon.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="KagNetComponents2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=077033ba788eab41, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\KagNetComponents2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PopupControl, Version=1.4.0.968, Culture=neutral, PublicKeyToken=04c10344d6495b18, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MSS.Output\Common\PopupControl.dll</HintPath>
+    </Reference>
+    <Reference Include="RSaEncryptionLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MSS.Output\Common\RSaEncryptionLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clasess\ControlResizer.cs" />
+    <Compile Include="Clasess\DigitToStr.cs" />
+    <Compile Include="Clasess\IniFilesSet.cs" />
+    <Compile Include="Clasess\Security\MSSConfigHelp.cs" />
+    <Compile Include="Clasess\Filing\MSSFileData.cs" />
+    <Compile Include="Clasess\Security\MSSFunction_cls.cs" />
+    <Compile Include="Clasess\Filing\MSSImageConvert.cs" />
+    <Compile Include="Clasess\MSSMessage.cs" />
+    <Compile Include="Clasess\PublicParam.cs" />
+    <Compile Include="Clasess\ShariaTime\Prayer_times.cs" />
+    <Compile Include="Clasess\Date\DateConvertor.cs" />
+    <Compile Include="Clasess\StringExtensions.cs" />
+    <Compile Include="Clasess\FilterClass\QueryFilter.cs" />
+    <Compile Include="Control\MSSContextMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSContextMenuStrip.Designer.cs">
+      <DependentUpon>MSSContextMenuStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSErrorProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSErrorProvider.designer.cs">
+      <DependentUpon>MSSErrorProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSListView.designer.cs">
+      <DependentUpon>MSSListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSMonthPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSMonthPicker.Designer.cs">
+      <DependentUpon>MSSMonthPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSDatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSDatePicker.Designer.cs">
+      <DependentUpon>MSSDatePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSComboTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSComboTree.Designer.cs">
+      <DependentUpon>MSSComboTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSExpandableSplitter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSExpandableSplitter.Designer.cs">
+      <DependentUpon>MSSExpandableSplitter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSGridexView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSGridexView.Designer.cs">
+      <DependentUpon>MSSGridexView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSHeaderGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSHeaderGrid.Designer.cs">
+      <DependentUpon>MSSHeaderGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSItemPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSItemPanel.Designer.cs">
+      <DependentUpon>MSSItemPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSExpandablePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSExpandablePanel.Designer.cs">
+      <DependentUpon>MSSExpandablePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSComboBox.Designer.cs">
+      <DependentUpon>MSSComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSProgressBar.designer.cs">
+      <DependentUpon>MSSProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSTreeView.Designer.cs">
+      <DependentUpon>MSSTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSLabelReflection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSLabelReflection.Designer.cs">
+      <DependentUpon>MSSLabelReflection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSIntBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSIntBox.Designer.cs">
+      <DependentUpon>MSSIntBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSPictureBox.Designer.cs">
+      <DependentUpon>MSSPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSTabControl.Designer.cs">
+      <DependentUpon>MSSTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSCheckBox.Designer.cs">
+      <DependentUpon>MSSCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSButton.Designer.cs">
+      <DependentUpon>MSSButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSGroupPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSGroupPanel.Designer.cs">
+      <DependentUpon>MSSGroupPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSLabel.Designer.cs">
+      <DependentUpon>MSSLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSPanel.Designer.cs">
+      <DependentUpon>MSSPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSRibbonControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSRibbonControl.Designer.cs">
+      <DependentUpon>MSSRibbonControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSRibbonBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSRibbonBar.Designer.cs">
+      <DependentUpon>MSSRibbonBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSNumberBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSNumberBox.Designer.cs">
+      <DependentUpon>MSSNumberBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MSSTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\MSSTextBox.Designer.cs">
+      <DependentUpon>MSSTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MSSColumnSelector_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MSSColumnSelector_frm.designer.cs">
+      <DependentUpon>MSSColumnSelector_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MSSImageSelectorFiling_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MSSImageSelectorFiling_frm.designer.cs">
+      <DependentUpon>MSSImageSelectorFiling_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MSSMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MSSMainForm.designer.cs">
+      <DependentUpon>MSSMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MSSPrintPreview_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MSSPrintPreview_frm.designer.cs">
+      <DependentUpon>MSSPrintPreview_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MSSImageSelector_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MSSImageSelector_frm.designer.cs">
+      <DependentUpon>MSSImageSelector_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MSSBaseNew_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MSSBaseNew_frm.Designer.cs">
+      <DependentUpon>MSSBaseNew_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MSSMessage_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MSSMessage_frm.designer.cs">
+      <DependentUpon>MSSMessage_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MSSReportDesignList_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MSSReportDesignList_frm.designer.cs">
+      <DependentUpon>MSSReportDesignList_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MSSLogViewer_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MSSLogViewer_frm.designer.cs">
+      <DependentUpon>MSSLogViewer_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MSSSelectorMulti_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MSSSelectorMulti_frm.designer.cs">
+      <DependentUpon>MSSSelectorMulti_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MSSSelectorList_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MSSSelectorList_frm.designer.cs">
+      <DependentUpon>MSSSelectorList_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MSSSelector_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MSSSelector_frm.designer.cs">
+      <DependentUpon>MSSSelector_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MSSColumnSelector_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MSSColumnSelector_UC.designer.cs">
+      <DependentUpon>MSSColumnSelector_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MSSPlaque.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MSSPlaque.Designer.cs">
+      <DependentUpon>MSSPlaque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MSSSearchPanel_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MSSSearchPanel_UC.designer.cs">
+      <DependentUpon>MSSSearchPanel_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MSSTime_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MSSTime_UC.Designer.cs">
+      <DependentUpon>MSSTime_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MSSSearchPanel_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MSSSearchPanel_frm.designer.cs">
+      <DependentUpon>MSSSearchPanel_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Clasess\Date\DateJalali.cs" />
+    <Compile Include="UserControls\MSSDate_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MSSDate_UC.Designer.cs">
+      <DependentUpon>MSSDate_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MSSSearch_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MSSSearch_UC.designer.cs">
+      <DependentUpon>MSSSearch_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MSSUserControl_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MSSUserControl_UC.designer.cs">
+      <DependentUpon>MSSUserControl_UC.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Templete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Control\MSSContextMenuStrip.resx">
+      <DependentUpon>MSSContextMenuStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\MSSCheckBox.resx">
+      <DependentUpon>MSSCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\MSSGroupPanel.resx">
+      <DependentUpon>MSSGroupPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\MSSPanel.resx">
+      <DependentUpon>MSSPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\MSSProgressBar.resx">
+      <DependentUpon>MSSProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\MSSRibbonControl.resx">
+      <DependentUpon>MSSRibbonControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MSSColumnSelector_frm.resx">
+      <DependentUpon>MSSColumnSelector_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MSSImageSelectorFiling_frm.resx">
+      <DependentUpon>MSSImageSelectorFiling_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MSSMainForm.resx">
+      <DependentUpon>MSSMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MSSPrintPreview_frm.resx">
+      <DependentUpon>MSSPrintPreview_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MSSImageSelector_frm.resx">
+      <DependentUpon>MSSImageSelector_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MSSBaseNew_frm.resx">
+      <DependentUpon>MSSBaseNew_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MSSMessage_frm.resx">
+      <DependentUpon>MSSMessage_frm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MSSReportDesignList_frm.resx">
+      <DependentUpon>MSSReportDesignList_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MSSLogViewer_frm.resx">
+      <DependentUpon>MSSLogViewer_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MSSSelectorMulti_frm.resx">
+      <DependentUpon>MSSSelectorMulti_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MSSSelectorList_frm.resx">
+      <DependentUpon>MSSSelectorList_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MSSSelector_frm.resx">
+      <DependentUpon>MSSSelector_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="UserControls\MSSColumnSelector_UC.resx">
+      <DependentUpon>MSSColumnSelector_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MSSPlaque.resx">
+      <DependentUpon>MSSPlaque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MSSSearchPanel_UC.resx">
+      <DependentUpon>MSSSearchPanel_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MSSTime_UC.resx">
+      <DependentUpon>MSSTime_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MSSSearchPanel_frm.resx">
+      <DependentUpon>MSSSearchPanel_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MSSDate_UC.resx">
+      <DependentUpon>MSSDate_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MSSSearch_UC.resx">
+      <DependentUpon>MSSSearch_UC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MSSUserControl_UC.resx">
+      <DependentUpon>MSSUserControl_UC.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Insert.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FieldSelector.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExcelExport.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MKH.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbonTabItem_Tools.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainMcpLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deletered.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edited.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_find.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interact.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Select 3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SelectColor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SerachExpert.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchExpert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnArchive.Image.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
